@@ -1,18 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(CartSpawner))]
 public class DayChanger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int day;
+
+    private CartSpawner cartSpawner;
+
+    private void Start()
     {
-        
+        cartSpawner = GetComponent<CartSpawner>();
+        cartSpawner.Init();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeDay()
     {
+        day++;
         
+        Cart cart = cartSpawner.TrySpawn();
+
+        if (cart == null)
+        {
+            Debug.Log("Утонула");
+            return;
+        }
+        
+        Debug.Log(cart.items[0]);
     }
 }

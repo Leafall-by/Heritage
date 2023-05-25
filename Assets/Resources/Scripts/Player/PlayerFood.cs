@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerFood : MonoBehaviour, IFoodHandler
+public class PlayerFood : MonoBehaviour
 {
     private int food;
 
