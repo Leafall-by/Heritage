@@ -7,16 +7,18 @@ public class Death : MonoBehaviour
 {
     [SerializeField] private GameObject deathCanvas;
     
-    [SerializeField] private PlayerFood foodHandler;
+    [SerializeField] private PlayerStats playerStats;
 
     private void Start()
     {
-        foodHandler.FoodChanged += TryDie;
+        playerStats.PlayerFood.FoodChanged += TryDie;
+        playerStats.PlayerWater.WaterIsChanged += TryDie;
+        playerStats.PlayerWood.WoodIsChanged += TryDie;
     }
 
-    private void TryDie(int food)
+    private void TryDie(int resource)
     {
-        if (food < 0)
+        if (resource < 0)
         {
             Die();
         }

@@ -16,7 +16,7 @@ public class PlayerFood : MonoBehaviour
         
         FoodChanged?.Invoke(this.food);
 
-        Debug.Log(this.food);
+        Debug.Log($"Еда: {this.food}");
     }
 
     public void RemoveFood(int food)
@@ -24,7 +24,8 @@ public class PlayerFood : MonoBehaviour
         this.food -= food;
             
         FoodChanged?.Invoke(this.food);
-        Debug.Log(this.food);
+        
+        Debug.Log($"Еда: {this.food}");
     }
 
     
