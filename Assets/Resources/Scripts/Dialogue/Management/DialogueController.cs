@@ -36,7 +36,7 @@ public class DialogueController : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))//TODO: Сменить управление на мобилку
         {
             ContinueStory();
         }
