@@ -11,10 +11,14 @@ public class DayChanger : MonoBehaviour
 
     private CartSpawner cartSpawner;
 
+    [SerializeField] private ShopController shopController;
+
     private void Start()
     {
         cartSpawner = GetComponent<CartSpawner>();
         cartSpawner.Init();
+        
+        shopController.Init();
     }
 
     public void ChangeDay()
@@ -29,6 +33,6 @@ public class DayChanger : MonoBehaviour
             return;
         }
         
-        Debug.Log(cart.items[0]);
+        cart.SetShopController(shopController);
     }
 }

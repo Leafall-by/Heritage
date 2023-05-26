@@ -20,7 +20,8 @@ public class CartSpawner : MonoBehaviour
         if (randomizer.IsSpawn())
         {
             Debug.Log("Телега приехала");
-            return randomizer.GetCart();
+            Cart cart = Instantiate(randomizer.GetCart());
+            return cart;
         }
         else return null; //TODO Ошибку, если телега не приехала
     }

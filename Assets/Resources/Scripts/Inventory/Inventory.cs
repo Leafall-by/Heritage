@@ -18,5 +18,7 @@ public class Inventory
     public void AddItem(Item item, int indexWidth, int indexHeight)
     {
         items[indexWidth, indexHeight] = item;
+        
+        Debug.Log(item);
     }
 }
