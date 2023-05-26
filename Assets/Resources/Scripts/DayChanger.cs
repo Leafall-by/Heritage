@@ -11,6 +11,8 @@ public class DayChanger : MonoBehaviour
 
     private CartSpawner cartSpawner;
 
+    private Cart cart;
+
     [SerializeField] private ShopController shopController;
 
     private void Start()
@@ -23,13 +25,19 @@ public class DayChanger : MonoBehaviour
 
     public void ChangeDay()
     {
+        try
+        {
+            Destroy(cart.gameObject);
+        }
+        catch (NullReferenceException e)
+        {
+        }
+
         day++;
         
-        Cart cart = cartSpawner.TrySpawn();
-
+        cart = cartSpawner.TrySpawn();
         if (cart == null)
         {
-            Debug.Log("Утонула");
             return;
         }
         

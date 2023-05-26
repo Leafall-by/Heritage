@@ -8,9 +8,9 @@ public class Food : ActiveItem
 
     private PlayerFood playerFood;
 
-    public void Init(PlayerFood playerFood)
+    public void Init()
     {
-        this.playerFood = playerFood;
+        GetComponentInParent<Player>();
     }
     
     public override void Use()

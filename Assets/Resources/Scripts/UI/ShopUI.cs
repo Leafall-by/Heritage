@@ -45,8 +45,23 @@ public class ShopUI : MonoBehaviour
 
     public void DeleteItemUI(int index)
     {
-        Destroy(SpawnPoint[index].transform.GetChild(0).gameObject);
+        GameObject item = SpawnPoint[index].transform.GetChild(0)?.gameObject;
+        if (item != null)
+        {
+            Destroy(SpawnPoint[index].transform.GetChild(0).gameObject);
         
-        buttons[index].gameObject.SetActive(false);
+            buttons[index].gameObject.SetActive(false);   
+        }
+    }
+
+    private void OnDisable()
+    {
+        foreach (var item in SpawnPoint)
+        {
+            foreach (Transform children in item.transform)
+            {
+                Destroy(children.gameObject);
+            }
+        }
     }
 }
