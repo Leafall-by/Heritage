@@ -7,36 +7,37 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private GameObject canvas;
     [SerializeField] private Cell[] cells;
-    [SerializeField] private Cell[] toolCells;
+    [SerializeField] private ToolCell[] toolCells;
 
     public void ShowInventory()
     {
         canvas.SetActive(true);
-        SetItems(player.Inventory.GetItems().ToArray());
+        SetItems(player.Inventory.GetItems(), player.Inventory.GetTools());
     }
 
-    public void SetItems(ItemState[] items)
+    private void SetItems(ItemState[] items, Tool[] tools)
     {
         foreach (var item in items)
         {
-            if (item.item is Tool tool)
-            {
-                GetAvaiableToolCell()?.SetItem(item);
-            }
-            else GetAvaiableCell()?.SetItem(item);
+            GetAvaiableCell()?.SetItem(item);
+        }
+
+        foreach (var tool in tools)
+        {
+            GetAvaiableToolCell()?.SetItem(tool);
         }
     }
 
-    public void CloseShop()
+    public void CloseInventory()
     {
         for (int i = 0; i < cells.Length; i++)
         {
             cells[i].DeleteItem();
         }
-        // for (int i = 0; i < toolCells.Length; i++)
-        // {
-        //     toolCells[i].DeleteItem();
-        // }
+        for (int i = 0; i < toolCells.Length; i++)
+        {
+            toolCells[i].DeleteItem();
+        }
 
         canvas.SetActive(false);
     }
@@ -54,9 +55,9 @@ public class InventoryUI : MonoBehaviour
         return null;
     }
 
-    private Cell GetAvaiableToolCell()
+    private ToolCell GetAvaiableToolCell()
     {
-        foreach (Cell cell in toolCells)
+        foreach (ToolCell cell in toolCells)
         {
             if (cell.IsAvailable())
             {

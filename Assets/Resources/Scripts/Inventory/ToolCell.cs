@@ -1,23 +1,20 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Cell : MonoBehaviour
+public class ToolCell : MonoBehaviour
 {
-    private ItemState item;
+    private Tool item;
     
     [SerializeField] private Image image;
-    [SerializeField] private TextMeshProUGUI text;
 
     public bool IsAvailable()
     {
         return item == null;
     }
     
-    public void SetItem(ItemState item)
+    public void SetItem(Tool item)
     {
         if (IsAvailable() == false)
         {
@@ -33,15 +30,13 @@ public class Cell : MonoBehaviour
 
     private void SetFields()
     {
-        text.text = item.count.ToString();
-        image.sprite = item.item.image;
+        image.sprite = item.image;
     }
 
     public void DeleteItem()
     {
         item = null;
         
-        text.text = "";
         image.enabled = false;
     }
 }

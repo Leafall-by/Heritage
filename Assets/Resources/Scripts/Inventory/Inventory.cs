@@ -9,15 +9,23 @@ public class Inventory
     private int maxItems = 6;
 
     private List<ItemState> items;
+    private List<Tool> tools;
 
     public Inventory()
     {
         items = new List<ItemState>();
+        tools = new List<Tool>();
     }
     
     public void AddItem(Item item)
     {
-        foreach (var itemClass in items)
+        if (item is Tool tool && tools.Count < maxTools)
+        {
+            tools.Add(tool);
+            return;
+        }
+        
+        foreach (var itemClass in items) //если пришёл не инструмент, то найти стопку таких же предметов и добавить туда
         {
             if (item.image == itemClass.item.image)
             {
@@ -32,8 +40,13 @@ public class Inventory
         items.Add(new ItemState(item));
     }
 
-    public List<ItemState> GetItems()
+    public ItemState[] GetItems()
     {
-        return items;
+        return items.ToArray();
+    }
+
+    public Tool[] GetTools()
+    {
+        return tools.ToArray();
     }
 }

@@ -124,9 +124,9 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _WindSize: 1
+    - _WindSize: 8.2
     - _WindSpeed: 2.02
-    - _WindStrength: 1
+    - _WindStrength: 3.79
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -134,5 +134,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _WindDirection: {r: 1, g: 1, b: 0, a: 0}
+    - _WindDirection: {r: 2, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
