@@ -7,7 +7,7 @@ public class CartSpawner : MonoBehaviour
 {
     [SerializeField] private Item[] items;
     [SerializeField] private Cart cart;
-    
+    [SerializeField] private GameObject _spawnPoint;
     private CartRandomizer randomizer;
 
     public void Init()
@@ -20,7 +20,7 @@ public class CartSpawner : MonoBehaviour
         if (randomizer.IsSpawn())
         {
             Debug.Log("Телега приехала");
-            Cart cart = Instantiate(randomizer.GetCart());
+            Cart cart = Instantiate(randomizer.GetCart(), _spawnPoint.transform);
             return cart;
         }
         else return null; //TODO Ошибку, если телега не приехала

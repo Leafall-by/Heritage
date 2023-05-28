@@ -20,7 +20,7 @@ public class DayChanger : MonoBehaviour
     //TODO: Вынести в отдельный класс
     [SerializeField] private ChangeDayAnimation dayAnimation;
     [SerializeField] private TextMeshProUGUI dayGUI;
-
+    [SerializeField] private GameObject _spawnPoint;
     private void Start()
     {
         cartSpawner = GetComponent<CartSpawner>();
@@ -55,7 +55,6 @@ public class DayChanger : MonoBehaviour
         {
             return;
         }
-
         cart.SetShopController(shopController);
     }
         

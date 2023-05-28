@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0.9770508, y: -1080.1528}
-  m_SizeDelta: {x: 17.389587, y: 18.087524}
+  m_AnchoredPosition: {x: -2.7401, y: -1076.2865}
+  m_SizeDelta: {x: 9.9553, y: 10.3549}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &5440551252104443760
 Rigidbody2D:
@@ -73,9 +73,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10451928, y: -0.25084764}
+  m_Offset: {x: -0.10451889, y: 0.02178955}
   serializedVersion: 2
-  m_Radius: 8.924399
+  m_Radius: 1.7001343
 --- !u!1001 &6636096057244285835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -83,6 +83,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 249267423030220448}
     m_Modifications:
+    - target: {fileID: 4578705495224012718, guid: 39ac9e9c442b1484aa2161901804de2a, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5709263984889660915, guid: 39ac9e9c442b1484aa2161901804de2a, type: 3}
       propertyPath: m_Name
       value: Money
