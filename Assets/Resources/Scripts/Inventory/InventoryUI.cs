@@ -11,7 +11,7 @@ public class InventoryUI : MonoBehaviour
 
     public void ShowInventory()
     {
-        canvas.SetActive(true);
+        //canvas.SetActive(true);
         SetItems(player.Inventory.GetItems(), player.Inventory.GetTools());
     }
 
@@ -39,7 +39,7 @@ public class InventoryUI : MonoBehaviour
             toolCells[i].DeleteItem();
         }
 
-        canvas.SetActive(false);
+        //canvas.SetActive(false);
     }
     
     private Cell GetAvaiableCell()

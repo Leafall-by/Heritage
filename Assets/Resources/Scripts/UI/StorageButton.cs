@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class StorageButton : MonoBehaviour
 {
     [SerializeField] private InventoryUI inventoryUI;
-    private bool isOpen;
+    [SerializeField] private InventoryAnimation _inventoryAnimation;
+    private bool isOpen = false;
 
     public void Click()
     {
@@ -19,6 +19,7 @@ public class StorageButton : MonoBehaviour
             inventoryUI.ShowInventory();
             isOpen = true;
         }
-
+        
+        _inventoryAnimation.ChangeState(isOpen);
     }
 }
