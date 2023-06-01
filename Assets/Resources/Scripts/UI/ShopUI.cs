@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,6 +31,7 @@ public class ShopUI : MonoBehaviour
 
             images[i].sprite = items[i].image;
             images[i].enabled = true;
+            buttons[i].GetComponentInChildren<TextMeshProUGUI>().text = items[i].price.ToString() + " золота";
         }
         
         ShowShop(items);

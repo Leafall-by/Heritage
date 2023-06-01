@@ -91,4 +91,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   image: {fileID: 21300000, guid: 18dbbe468c9319c4492ef83ca5067c5e, type: 3}
-  price: 144
+  price: 12
+  endurance: 50

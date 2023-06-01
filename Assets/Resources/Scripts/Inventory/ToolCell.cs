@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class ToolCell : MonoBehaviour
     private Tool item;
     
     [SerializeField] private Image image;
+    [SerializeField] private Image enduranceBar;
 
     public bool IsAvailable()
     {
@@ -24,6 +26,9 @@ public class ToolCell : MonoBehaviour
         this.item = item;
 
         image.enabled = true;
+        enduranceBar.enabled = true;
+        
+        enduranceBar.fillAmount = item.endurance / 100.0f;
         
         SetFields();
     }
@@ -38,5 +43,6 @@ public class ToolCell : MonoBehaviour
         item = null;
         
         image.enabled = false;
+        enduranceBar.enabled = false;
     }
 }

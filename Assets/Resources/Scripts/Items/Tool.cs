@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Tool : Item
 {
-    [SerializeField] private int endurance;
+    [SerializeField] public int endurance = 20;
 }

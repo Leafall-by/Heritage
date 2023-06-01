@@ -91,5 +91,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   image: {fileID: 21300000, guid: ec12530d4d80da144918ddcd9ccdccbb, type: 3}
-  price: 111
+  price: 9
   food: 1

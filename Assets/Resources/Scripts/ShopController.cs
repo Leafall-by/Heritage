@@ -30,7 +30,7 @@ public class ShopController : MonoBehaviour
     {
         try
         {
-            player.Wallet.RemoveGold(5);
+            player.Wallet.RemoveGold(items[index].price);
         }
         catch (NotEnoughGoldException ex)
         {
