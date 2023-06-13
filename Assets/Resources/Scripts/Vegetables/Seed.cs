@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Seed : Item
+abstract public class Seed : Item
 {
+    [SerializeField] private Vegetable prefab;
     [SerializeField] private int seedCount;
+
     public override void Use()
     {
-        throw new System.NotImplementedException();
+        GardenController controller = FindObjectOfType<GardenController>();
+
+        for (int i = 0; i < seedCount; i++)
+        {
+            controller.AddVegetable(prefab);
+        }
     }
 }

@@ -39,6 +39,24 @@ public class Inventory
         
         items.Add(new ItemState(item));
     }
+    
+    public void RemoveItem(Item item)
+    {
+        if (item is Tool tool && tools.Count < maxTools)
+        {
+            tools.Remove(tool);
+            return;
+        }
+
+        foreach (var itemClass in items)
+        {
+            if (item.image == itemClass.item.image)
+            {
+                itemClass.count--;
+                return;
+            }
+        }
+    }
 
     public ItemState[] GetItems()
     {

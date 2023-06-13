@@ -6,16 +6,16 @@ using UnityEngine.UI;
 public class GardenCell : MonoBehaviour
 {
     private Vegetable vegetable;
-    [SerializeField] private Image image;
 
     public bool IsAvaialble()
     {
         return vegetable == null;
     }
 
-    public void SetVegetable(Vegetable vegetable)
+    public Vegetable SetVegetable(Vegetable vegetable)
     {
         this.vegetable = Instantiate(vegetable, this.transform);
+        return this.vegetable;
     }
 
     public void DestroyVegetable()

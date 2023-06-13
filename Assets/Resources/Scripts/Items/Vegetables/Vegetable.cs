@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Vegetable : Food
 {
-    private int growPercent;
+    private int growPercent = 0;
     public int GrowPercent
     {
         get => growPercent;

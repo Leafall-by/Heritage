@@ -16,6 +16,7 @@ public class DayChanger : MonoBehaviour
     private Cart cart;
 
     [SerializeField] private ShopController shopController;
+    [SerializeField] private GardenController gardenController;
     
     //TODO: Вынести в отдельный класс
     [SerializeField] private ChangeDayAnimation dayAnimation;
@@ -42,9 +43,10 @@ public class DayChanger : MonoBehaviour
     public void ChangeDay()
     {
         day++;
-        
+        gardenController.Grow();
         dayGUI.text = $"День: {day}";
         dayAnimation.ChangeDay();
+        
     }
 
     //Лошадь спавнится в анимации
@@ -57,5 +59,5 @@ public class DayChanger : MonoBehaviour
         }
         cart.SetShopController(shopController);
     }
-        
+
 }

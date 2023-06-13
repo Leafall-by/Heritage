@@ -6,20 +6,11 @@ using UnityEngine;
 public class GardenUI : MonoBehaviour
 {
     [SerializeField] private GardenCell[] cells;
-    [SerializeField] private Cabbage prefab;
 
-    private void Start()
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            AddVegetable(prefab);
-        }
-    }
-
-    public void AddVegetable(Vegetable vegetable)
+    public Vegetable AddVegetable(Vegetable vegetable)
     {
         GardenCell cell = GetAvaialableCell();
-        cell.SetVegetable(vegetable);
+        return cell.SetVegetable(vegetable);
     }
     
     private GardenCell GetAvaialableCell()
