@@ -7,7 +7,8 @@ public class SeedMenuController : MonoBehaviour
 {
     [SerializeField] private Player player;
     [SerializeField] private GameObject canvas;
-
+    [SerializeField] private GardenController controller;
+    
     [SerializeField] private Cell[] cells;
 
     private void Start()
@@ -61,6 +62,14 @@ public class SeedMenuController : MonoBehaviour
 
     private void UseSeed(Item item)
     {
+        foreach (var cell in cells)
+        {
+            if (controller.IsAvaiable() == false)
+            {
+                Debug.Log("Огород занят"); //TODO выводить в игре
+                return;
+            }
+        }
         item.Use();
         
         player.Inventory.RemoveItem(item);

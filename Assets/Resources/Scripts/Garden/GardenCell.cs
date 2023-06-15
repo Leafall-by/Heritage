@@ -1,10 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class GardenCell : MonoBehaviour
+public class GardenCell : MonoBehaviour, IPointerClickHandler
 {
+    public Action<Vegetable> OnCollect;
+    
     private Vegetable vegetable;
 
     public bool IsAvaialble()
@@ -18,8 +22,17 @@ public class GardenCell : MonoBehaviour
         return this.vegetable;
     }
 
-    public void DestroyVegetable()
+    public void TryDestroyVegetable()
     {
-        vegetable = null;
+        if (vegetable.GrowPercent == 100)
+        {
+            OnCollect?.Invoke(vegetable);
+            this.vegetable = null;
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        TryDestroyVegetable();
     }
 }

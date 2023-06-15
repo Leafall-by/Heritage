@@ -4309,7 +4309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21730663, y: 0.69500005}
   m_AnchorMax: {x: 0.77300006, y: 0.8113995}
-  m_AnchoredPosition: {x: 90.52254, y: -99.34283}
+  m_AnchoredPosition: {x: 90.52253, y: -99.34283}
   m_SizeDelta: {x: 199.21027, y: 24.526146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &535409145
@@ -13152,7 +13152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21730663, y: 0.041699737}
   m_AnchorMax: {x: 0.77300006, y: 0.15969974}
-  m_AnchoredPosition: {x: 92.656075, y: 159.31119}
+  m_AnchoredPosition: {x: 92.65608, y: 159.31119}
   m_SizeDelta: {x: 195.87646, y: 20.28164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1154931983
@@ -15716,6 +15716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1585743466}
   canvas: {fileID: 1538175463}
+  controller: {fileID: 1511518053}
   cells:
   - {fileID: 509073149}
   - {fileID: 972067389}

@@ -18,5 +18,13 @@ public class Cabbage : Vegetable
         {
             GetComponent<Image>().sprite = sprites[2];
         }
+        if (GrowPercent > 70)
+        {
+            GetComponent<Image>().sprite = sprites[3]; 
+        }
+        if (GrowPercent == 100)
+        {
+            GetComponent<Image>().sprite = sprites[4];
+        }
     }
 }

@@ -11,11 +11,13 @@ public class GardenController : MonoBehaviour
     private void Start()
     {
         vegetables = new List<Vegetable>();
+        gardenUI.OnCollect += DeleteVegetable;
     }
 
     public void AddVegetable(Vegetable vegetable)
     {
-        vegetables.Add(gardenUI.AddVegetable(vegetable));
+        Vegetable objVegetable = gardenUI.AddVegetable(vegetable);
+        vegetables.Add(objVegetable);
     }
 
     public void Grow()
@@ -24,5 +26,18 @@ public class GardenController : MonoBehaviour
         {
             vegetable.AddPercent();
         }
+    }
+
+    public bool IsAvaiable()
+    {
+        return gardenUI.IsAvaiable();
+    }
+
+    private void DeleteVegetable(Vegetable vegetable)
+    {
+        Inventory inventory = FindObjectOfType<Player>().Inventory;
+        inventory.AddItem(vegetable);
+        vegetables.Remove(vegetable);
+        Destroy(vegetable.gameObject);
     }
 }
