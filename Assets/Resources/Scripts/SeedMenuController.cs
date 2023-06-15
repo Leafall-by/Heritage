@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,39 @@ public class SeedMenuController : MonoBehaviour
     [SerializeField] private GameObject canvas;
 
     [SerializeField] private Cell[] cells;
-    
+
+    private void Start()
+    {
+        foreach (var cell in cells)
+        {
+            cell.OnUsed += UseSeed;
+        }
+    }
+
     public void ShowSeedMenu()
     {
         canvas.SetActive(true);
         
+        SetCellItems();
+    }
+    
+    public void CloseSeedMenu()
+    {
+        DeleteCellItems();
+        
+        canvas.SetActive(false);
+    }
+
+    private void RefreshCells()
+    {
+        
+        DeleteCellItems();
+        SetCellItems();
+        
+    }
+
+    private void SetCellItems()
+    {
         foreach (var item in player.Inventory.GetItems())
         {
             if (item.item is Seed)
@@ -21,15 +50,21 @@ public class SeedMenuController : MonoBehaviour
             }
         }
     }
-    
-    public void CloseSeedMenu()
+
+    private void DeleteCellItems()
     {
-        for (int i = 0; i < cells.Length; i++)
+        foreach (var cell in cells)
         {
-            cells[i].DeleteItem();
+            cell.DeleteItem();
         }
+    }
+
+    private void UseSeed(Item item)
+    {
+        item.Use();
         
-        canvas.SetActive(false);
+        player.Inventory.RemoveItem(item);
+        RefreshCells();
     }
     
     private Cell GetAvaiableCell()

@@ -10,7 +10,7 @@ public abstract class Vegetable : Food
         get => growPercent;
         set
         {
-            growPercent += value;
+            growPercent = value;
             if (growPercent > 100)
             {
                 growPercent = 100;

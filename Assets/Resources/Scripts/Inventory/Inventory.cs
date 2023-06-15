@@ -24,14 +24,12 @@ public class Inventory
             tools.Add(tool);
             return;
         }
-        
-        foreach (var itemClass in items) //если пришёл не инструмент, то найти стопку таких же предметов и добавить туда
+
+        ItemState itemState = FindItemState(item);
+        if (itemState != null)
         {
-            if (item.image == itemClass.item.image)
-            {
-                itemClass.count++;
-                return;
-            }
+            itemState.count++;
+            return;
         }
         
         if (items.Count == maxItems)
@@ -48,14 +46,31 @@ public class Inventory
             return;
         }
 
-        foreach (var itemClass in items)
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (item.image == items[i].item.image)
+            {
+                items[i].count--;
+
+                if (items[i].count == 0)
+                {
+                    items.Remove(FindItemState(item));
+                }
+            }
+        }
+    }
+    
+    private ItemState FindItemState(Item item)
+    {
+        foreach (var itemClass in items) //если пришёл не инструмент, то найти стопку таких же предметов и добавить туда
         {
             if (item.image == itemClass.item.image)
             {
-                itemClass.count--;
-                return;
+                return itemClass;
             }
         }
+
+        return null; //TODO выкидывать ошибку
     }
 
     public ItemState[] GetItems()

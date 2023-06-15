@@ -6,12 +6,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Cell : MonoBehaviour
+public class Cell : MonoBehaviour, IPointerClickHandler
 {
-    private ItemState item;
+    public Action<Item> OnUsed;
     
     [SerializeField] private Image image;
     [SerializeField] private TextMeshProUGUI text;
+    
+    private ItemState item;
 
     public bool IsAvailable()
     {
@@ -44,5 +46,10 @@ public class Cell : MonoBehaviour
         
         text.text = "";
         image.enabled = false;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnUsed?.Invoke(item.item);
     }
 }

@@ -9,7 +9,7 @@ public class Cabbage : Vegetable
     
     public override void AddPercent()
     {
-        GrowPercent += Random.Range(10, 21);
+        GrowPercent += Random.Range(5, 15);
         if (GrowPercent > 20)
         {
             GetComponent<Image>().sprite = sprites[1];
@@ -18,6 +18,5 @@ public class Cabbage : Vegetable
         {
             GetComponent<Image>().sprite = sprites[2];
         }
-        Debug.Log(GrowPercent);
     }
 }

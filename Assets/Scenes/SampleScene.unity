@@ -15112,7 +15112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21681254, y: 0}
   m_AnchorMax: {x: 1, y: 0.31288493}
-  m_AnchoredPosition: {x: -0.60595703, y: -16.34259}
+  m_AnchoredPosition: {x: -0.60595703, y: -16.34253}
   m_SizeDelta: {x: 1.2120361, y: 34.655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511518049
@@ -16612,10 +16612,22 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1628790825}
+  m_TargetGraphic: {fileID: 431303853}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 431303855}
+        m_TargetAssemblyTypeName: ButtonAnimation, Assembly-CSharp
+        m_MethodName: PlayAnimButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 940976565}
         m_TargetAssemblyTypeName: DayChanger, Assembly-CSharp
         m_MethodName: ChangeDay
@@ -19256,10 +19268,22 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1912235181}
+  m_TargetGraphic: {fileID: 431303853}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 431303855}
+        m_TargetAssemblyTypeName: ButtonAnimation, Assembly-CSharp
+        m_MethodName: PlayAnimButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 940976565}
         m_TargetAssemblyTypeName: DayChanger, Assembly-CSharp
         m_MethodName: ChangeDay
@@ -20921,10 +20945,22 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2122582958}
+  m_TargetGraphic: {fileID: 431303853}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 431303855}
+        m_TargetAssemblyTypeName: ButtonAnimation, Assembly-CSharp
+        m_MethodName: PlayAnimButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 940976565}
         m_TargetAssemblyTypeName: DayChanger, Assembly-CSharp
         m_MethodName: ChangeDay
