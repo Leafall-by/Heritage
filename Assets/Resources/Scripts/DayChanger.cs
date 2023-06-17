@@ -17,6 +17,7 @@ public class DayChanger : MonoBehaviour
 
     [SerializeField] private ShopController shopController;
     [SerializeField] private GardenController gardenController;
+    [SerializeField] private CardGiverUI cardGiverUI;
     
     //TODO: Вынести в отдельный класс
     [SerializeField] private ChangeDayAnimation dayAnimation;
@@ -47,6 +48,8 @@ public class DayChanger : MonoBehaviour
         dayGUI.text = $"День: {day}";
         dayAnimation.ChangeDay();
         
+        cardGiverUI.ShowCanvas();
+        cardGiverUI.RandomizeCards();
     }
 
     //Лошадь спавнится в анимации

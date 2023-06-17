@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ToolCell : MonoBehaviour
 {
-    private Tool item;
+    public Tool item;
     
     [SerializeField] private Image image;
     [SerializeField] private Image enduranceBar;

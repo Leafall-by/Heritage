@@ -5,27 +5,18 @@ using UnityEngine;
 
 public class CardUI : MonoBehaviour
 {
-    [SerializeField] private Card[] allCards;
     [SerializeField] private GameObject canvas;
-
+    [SerializeField] private GameObject content;
     private List<Card> cards = new List<Card>();
 
-    public void AddCard(Card card)
+    public void AddCard(Card cardPrefab)
     {
-        cards.Add(card);
+        cards.Add(Instantiate(cardPrefab, content.transform)); 
     }
     
     public void ShowCards()
     {
         canvas.SetActive(true);
-
-        CardRandomizer randomizer = new CardRandomizer(allCards);
-        Card[] cards = randomizer.Randomize();
-        foreach (var card in cards)
-        {
-            Debug.Log(card);
-            AddCard(card);
-        }
     }
 
     public void CloseCanvas()

@@ -10,6 +10,7 @@ public class SeedMenuController : MonoBehaviour
     [SerializeField] private GardenController controller;
     
     [SerializeField] private Cell[] cells;
+    [SerializeField] private ToolCell toolCell;
 
     private void Start()
     {
@@ -50,6 +51,16 @@ public class SeedMenuController : MonoBehaviour
                 GetAvaiableCell()?.SetItem(item);
             }
         }
+
+        foreach (var tool in player.Inventory.GetTools())
+        {
+            if (tool is Hoe)
+            {
+                Debug.Log("vfdvf");
+                toolCell.SetItem(tool);
+                break;
+            }
+        }
     }
 
     private void DeleteCellItems()
@@ -58,6 +69,7 @@ public class SeedMenuController : MonoBehaviour
         {
             cell.DeleteItem();
         }
+        toolCell.DeleteItem();
     }
 
     private void UseSeed(Item item)
@@ -70,7 +82,13 @@ public class SeedMenuController : MonoBehaviour
                 return;
             }
         }
-        item.Use();
+
+        if (toolCell.item != null)
+        {
+            toolCell.item.endurance -= 25;
+            item.Use();
+        }
+        
         
         player.Inventory.RemoveItem(item);
         RefreshCells();
