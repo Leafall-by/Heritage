@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         PlayerStats = GetComponent<PlayerStats>();
         PlayerStats.Init();
 
