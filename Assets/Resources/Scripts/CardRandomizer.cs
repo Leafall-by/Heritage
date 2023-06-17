@@ -6,7 +6,6 @@ using Random = UnityEngine.Random;
 
 public class CardRandomizer
 {
-
     private Card[] allCards;
     
     private int cardCount = 3;

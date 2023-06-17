@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CardGiverUI : MonoBehaviour
 {
-    [SerializeField] private Card[] allCards;
-    [SerializeField] private GameObject content;
-    [SerializeField] private GameObject canvas;
+    [SerializeField] private Canvas canvas;
     [SerializeField] private CardUI cardUI;
+    [Space]
+    [SerializeField] private Card[] allCards;
+    [SerializeField] private Transform[] spawnpoints;
 
     private int currentCardIndex;
 
@@ -22,7 +23,7 @@ public class CardGiverUI : MonoBehaviour
     
     public void ShowCard()
     {
-        Card card = Instantiate(randomizedCards[currentCardIndex], content.transform);
+        Card card = Instantiate(randomizedCards[currentCardIndex], spawnpoints[currentCardIndex].transform);
         currentCardIndex++;
         
         cardUI.AddCard(card);
@@ -30,11 +31,11 @@ public class CardGiverUI : MonoBehaviour
 
     public void ShowCanvas()
     {
-        canvas.SetActive(true);
+        canvas.gameObject.SetActive(true);
     }
 
     public void CloseCanvas()
     {
-        canvas.SetActive(false);
+        canvas.gameObject.SetActive(false);
     }
 }
