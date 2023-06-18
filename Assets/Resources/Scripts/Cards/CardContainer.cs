@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Card : MonoBehaviour
+public class CardContainer : MonoBehaviour
 {
-    abstract public void Use();
+    public Card prefabCard;
 }

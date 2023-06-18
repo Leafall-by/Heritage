@@ -7,26 +7,27 @@ public class CardGiverUI : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private CardUI cardUI;
     [Space]
-    [SerializeField] private Card[] allCards;
+    [SerializeField] private CardContainer[] allCardContainer;
     [SerializeField] private Transform[] spawnpoints;
 
     private int currentCardIndex;
 
-    private Card[] randomizedCards;
+    private CardContainer[] randomizedCards;
 
     public void RandomizeCards()
     {
         currentCardIndex = 0;
-        CardRandomizer randomizer = new CardRandomizer(allCards);
+        CardRandomizer randomizer = new CardRandomizer(allCardContainer);
         randomizedCards = randomizer.Randomize();
     }
     
     public void ShowCard()
     {
-        Card card = Instantiate(randomizedCards[currentCardIndex], spawnpoints[currentCardIndex].transform);
+        CardContainer card = Instantiate(randomizedCards[currentCardIndex], spawnpoints[currentCardIndex].transform);
         currentCardIndex++;
         
-        cardUI.AddCard(card);
+        cardUI.AddCard(card.prefabCard);
+        card.prefabCard.Use();
     }
 
     public void ShowCanvas()
@@ -37,5 +38,10 @@ public class CardGiverUI : MonoBehaviour
     public void CloseCanvas()
     {
         canvas.gameObject.SetActive(false);
+
+        foreach (var spawnpoint in spawnpoints)
+        {
+            Destroy(spawnpoint.GetChild(0).gameObject);
+        }
     }
 }

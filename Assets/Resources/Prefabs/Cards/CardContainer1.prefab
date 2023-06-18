@@ -176,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1209312654162949003}
-  - component: {fileID: 1696238861505082282}
+  - component: {fileID: 8906017063622564220}
   - component: {fileID: 5414178818645154233}
   - component: {fileID: 4662544082146360234}
   - component: {fileID: 691504702869981298}
@@ -210,7 +210,7 @@ RectTransform:
   m_AnchoredPosition: {x: -213.25156, y: 279}
   m_SizeDelta: {x: -233.5101, y: -12.25}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1696238861505082282
+--- !u!114 &8906017063622564220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,9 +219,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1462191962127229012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c571845727b3c41bfccb65c18d3398, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d6cf099e82b14446ab837c2811b3a92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabCard: {fileID: 4926319309060119204, guid: f1c07e9f769451440a785fee31d7cadd, type: 3}
 --- !u!95 &5414178818645154233
 Animator:
   serializedVersion: 5
@@ -370,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3210964136173191750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -506,7 +507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6242872681443382757
 RectTransform:
   m_ObjectHideFlags: 0
@@ -783,6 +784,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1209312654162949003}
     m_Modifications:
+    - target: {fileID: 1454354505684239178, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1721568002788996264, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -890,6 +895,18 @@ PrefabInstance:
     - target: {fileID: 1721568003017547043, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_Name
       value: Image (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366649652652540212, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378083734392014500, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_text
+      value: Treasure
+      objectReference: {fileID: 0}
+    - target: {fileID: 5561361253489068223, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1721568002788996265, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}

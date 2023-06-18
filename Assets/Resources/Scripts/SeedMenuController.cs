@@ -56,7 +56,6 @@ public class SeedMenuController : MonoBehaviour
         {
             if (tool is Hoe)
             {
-                Debug.Log("vfdvf");
                 toolCell.SetItem(tool);
                 break;
             }

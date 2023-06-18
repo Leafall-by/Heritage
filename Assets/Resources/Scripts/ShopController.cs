@@ -7,11 +7,23 @@ public class ShopController : MonoBehaviour
 {
     [SerializeField] private Player player;
     private Item[] items;
-    private ShopUI shopUI;
+    [SerializeField] private ShopUI shopUI;
 
-    public void Init()
+    private float discount;
+    public float Discount
     {
-        shopUI = GetComponent<ShopUI>();
+        get
+        {
+            return discount;
+        }
+        set
+        {
+            discount = value;
+            if (discount > 100)
+                discount = 100;
+            else if (discount < 0)
+                discount = 0;
+        }
     }
 
     private void ShowShop(Item[] items)
@@ -30,7 +42,7 @@ public class ShopController : MonoBehaviour
     {
         try
         {
-            player.Wallet.RemoveGold(items[index].price);
+            player.Wallet.RemoveGold((int)Math.Ceiling(items[index].price - (items[index].price * (discount/100.0))));
         }
         catch (NotEnoughGoldException ex)
         {

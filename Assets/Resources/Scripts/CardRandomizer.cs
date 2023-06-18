@@ -6,20 +6,20 @@ using Random = UnityEngine.Random;
 
 public class CardRandomizer
 {
-    private Card[] allCards;
+    private CardContainer[] allCards;
     
     private int cardCount = 3;
     
-    private Card[] randomizedCards;
+    private CardContainer[] randomizedCards;
 
-    public CardRandomizer(Card[] cards)
+    public CardRandomizer(CardContainer[] cards)
     {
         allCards = cards;
     }
     
-    public Card[] Randomize()
+    public CardContainer[] Randomize()
     {
-        randomizedCards = new Card[cardCount];
+        randomizedCards = new CardContainer[cardCount];
         
         for (int i = 0; i < cardCount; i++)
         {
@@ -29,9 +29,9 @@ public class CardRandomizer
         return randomizedCards;
     }
 
-    private Card GetRandomCard()
+    private CardContainer GetRandomCard()
     {
-        Card randomCard = allCards[Random.Range(0, allCards.Length)];
+        CardContainer randomCard = allCards[Random.Range(0, allCards.Length)];
 
         bool isContains = false;
         foreach (var card in randomizedCards)

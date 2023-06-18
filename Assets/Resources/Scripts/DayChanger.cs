@@ -27,8 +27,6 @@ public class DayChanger : MonoBehaviour
     {
         cartSpawner = GetComponent<CartSpawner>();
         cartSpawner.Init();
-        
-        shopController.Init();
     }
 
     public void DeleteCart()
