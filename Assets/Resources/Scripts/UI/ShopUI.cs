@@ -16,7 +16,7 @@ public class ShopUI : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void SetItemsUI(Item[] items)
+    public void SetItemsUI(Item[] items, float discount)
     {
         ShowButtons();
         
@@ -31,7 +31,7 @@ public class ShopUI : MonoBehaviour
 
             images[i].sprite = items[i].image;
             images[i].enabled = true;
-            buttons[i].GetComponentInChildren<TextMeshProUGUI>().text = items[i].price.ToString() + " золота";
+            buttons[i].GetComponentInChildren<TextMeshProUGUI>().text = $"{Math.Ceiling(items[i].price - (items[i].price * (discount/100.0)))} золота";
         }
         
         ShowShop(items);

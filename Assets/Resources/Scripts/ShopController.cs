@@ -28,7 +28,7 @@ public class ShopController : MonoBehaviour
 
     private void ShowShop(Item[] items)
     {
-        shopUI.SetItemsUI(items);
+        shopUI.SetItemsUI(items, Discount);
     }
     
     public void SetItems(Item[] items)
