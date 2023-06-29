@@ -39,6 +39,11 @@ namespace Resources.Scripts.Animation
         {
             _activateButton.enabled = true;
         }
+        
+        public void ShowCards()
+        {
+            _dayChanger.ShowCards();
+        }
 
         
     }

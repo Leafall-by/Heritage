@@ -22,7 +22,7 @@ public class SeedMenuController : MonoBehaviour
 
     public void ShowSeedMenu()
     {
-        canvas.SetActive(true);
+        //canvas.SetActive(true);
         
         SetCellItems();
     }
@@ -30,8 +30,7 @@ public class SeedMenuController : MonoBehaviour
     public void CloseSeedMenu()
     {
         DeleteCellItems();
-        
-        canvas.SetActive(false);
+        //canvas.SetActive(false);
     }
 
     private void RefreshCells()

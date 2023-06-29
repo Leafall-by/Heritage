@@ -45,7 +45,11 @@ public class DayChanger : MonoBehaviour
         gardenController.Grow();
         dayGUI.text = $"День: {day}";
         dayAnimation.ChangeDay();
-        
+    }
+    
+    //Спавн карт в анимации.
+    public void ShowCards()
+    {
         cardGiverUI.ShowCanvas();
         cardGiverUI.RandomizeCards();
     }
