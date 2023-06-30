@@ -22,15 +22,12 @@ public class SeedMenuController : MonoBehaviour
 
     public void ShowSeedMenu()
     {
-        //canvas.SetActive(true);
-        
         SetCellItems();
     }
     
     public void CloseSeedMenu()
     {
         DeleteCellItems();
-        //canvas.SetActive(false);
     }
 
     private void RefreshCells()
@@ -38,7 +35,6 @@ public class SeedMenuController : MonoBehaviour
         
         DeleteCellItems();
         SetCellItems();
-        
     }
 
     private void SetCellItems()
@@ -47,7 +43,8 @@ public class SeedMenuController : MonoBehaviour
         {
             if (item.item is Seed)
             {
-                GetAvaiableCell()?.SetItem(item);
+                Cell cell =  GetAvaiableCell();
+                cell.SetItem(item);
             }
         }
 
