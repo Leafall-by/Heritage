@@ -9,6 +9,8 @@ public class Eloquence : Card
         controller = FindObjectOfType<ShopController>();
         Debug.Log(controller);
         controller.Discount = discount;
+
+        FindObjectOfType<DayChanger>().DayChanged.AddListener(DisableCard);
     }
 
     private void DisableCard()

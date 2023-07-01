@@ -5,6 +5,7 @@ using Resources.Scripts.Animation;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CartSpawner))]
 public class DayChanger : MonoBehaviour
@@ -23,6 +24,8 @@ public class DayChanger : MonoBehaviour
     [SerializeField] private ChangeDayAnimation dayAnimation;
     [SerializeField] private TextMeshProUGUI dayGUI;
     [SerializeField] private GameObject _spawnPoint;
+
+    public UnityEvent DayChanged;
     private void Start()
     {
         cartSpawner = GetComponent<CartSpawner>();
@@ -45,6 +48,8 @@ public class DayChanger : MonoBehaviour
         gardenController.Grow();
         dayGUI.text = $"День: {day}";
         dayAnimation.ChangeDay();
+        
+        DayChanged?.Invoke();
     }
     
     //Спавн карт в анимации.

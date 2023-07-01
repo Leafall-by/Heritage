@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SeedMenuController : MonoBehaviour
 {
+    [SerializeField] private TimeController timeController;
     [SerializeField] private Player player;
     [SerializeField] private GameObject canvas;
     [SerializeField] private GardenController controller;
@@ -86,6 +87,7 @@ public class SeedMenuController : MonoBehaviour
         
         
         player.Inventory.RemoveItem(item);
+        timeController.AddTime(60);
         RefreshCells();
     }
     

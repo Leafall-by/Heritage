@@ -22,4 +22,9 @@ public class StorageButton : MonoBehaviour
         
         _inventoryAnimation.ChangeState(isOpen);
     }
+
+    private void OnDisable()
+    {
+        isOpen = false;
+    }
 }

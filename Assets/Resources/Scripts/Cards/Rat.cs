@@ -8,6 +8,8 @@ public class Rat : Card
     public override void Use()
     {
         PlayerStats stats = FindObjectOfType<PlayerStats>();
-        stats.PlayerFood.RemoveFood(foodForMinus);
+        PlayerFood food = stats.PlayerFood;
+        
+        food.RemoveFood(foodForMinus);
     }
 }

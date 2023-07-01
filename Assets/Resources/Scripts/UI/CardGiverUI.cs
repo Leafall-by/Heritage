@@ -26,8 +26,8 @@ public class CardGiverUI : MonoBehaviour
         CardContainer card = Instantiate(randomizedCards[currentCardIndex], spawnpoints[currentCardIndex].transform);
         currentCardIndex++;
         
-        cardUI.AddCard(card.prefabCard);
         card.prefabCard.Use();
+        cardUI.AddCard(card.prefabCard);
     }
 
     public void ShowCanvas()

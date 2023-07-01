@@ -6,27 +6,25 @@ using UnityEngine.Events;
 
 public class PlayerFood : MonoBehaviour
 {
-    private int food;
+    public int Food { get; private set; }
 
     public event Action<int> FoodChanged;
 
     public void AddFood(int food)
     {
-        this.food += food;
+        this.Food += food;
         
-        FoodChanged?.Invoke(this.food);
+        FoodChanged?.Invoke(this.Food);
 
-        Debug.Log($"Еда: {this.food}");
+        Debug.Log($"Еда: {this.Food}");
     }
 
     public void RemoveFood(int food)
     {
-        this.food -= food;
+        this.Food -= food;
             
-        FoodChanged?.Invoke(this.food);
+        FoodChanged?.Invoke(this.Food);
         
-        Debug.Log($"Еда: {this.food}");
+        Debug.Log($"Еда: {this.Food}");
     }
-
-    
 }

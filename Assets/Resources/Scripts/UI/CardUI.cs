@@ -23,4 +23,9 @@ public class CardUI : MonoBehaviour
     {
         canvas.SetActive(false);
     }
+
+    public List<Card> GetCards()
+    {
+        return cards;
+    }
 }
