@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : Card
+public class Arrow : TimeCard
 {
+    private SeedMenuController controller;
     public override void Use()
     {
-        Debug.Log("Arrow");
+        controller = FindObjectOfType<SeedMenuController>();
+        controller.IsCanSeed = false;
+    }
+
+    public override void CancelAction()
+    {
+        controller.IsCanSeed = true;
     }
 }

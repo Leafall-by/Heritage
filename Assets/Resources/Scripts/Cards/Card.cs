@@ -28,7 +28,6 @@ public abstract class Card : MonoBehaviour
         name.text = cardName;
         description.text = cardDescrtiption;
         gameObject.GetComponent<Image>().sprite = BaseSprite;
-        Debug.Log(BaseSprite);
     }
 
     abstract public void Use();

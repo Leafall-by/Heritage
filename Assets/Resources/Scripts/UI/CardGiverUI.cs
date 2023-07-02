@@ -35,9 +35,12 @@ public class CardGiverUI : MonoBehaviour
         
         CardContainer card = Instantiate(randomizedCards[currentCardIndex], spawnpoints[currentCardIndex].transform);
         currentCardIndex++;
-        
-        card.prefabCard.Use();
-        cardUI.AddCard(card.prefabCard);
+
+        if (card.prefabCard is TimeCard tc)
+        {
+            cardUI.AddCard(tc);  
+        }
+        else card.prefabCard.Use();
     }
 
     private void ShowBlindCard()
@@ -46,18 +49,21 @@ public class CardGiverUI : MonoBehaviour
         {
             CardContainer card = Instantiate(randomizedCards[currentCardIndex], spawnpoints[currentCardIndex].transform);
             currentCardIndex++;
-        
-            card.prefabCard.Use();
-            cardUI.AddCard(card.prefabCard);
+            
+            cardUI.AddCard((TimeCard)card.prefabCard);
+
             return;
         }
         
         CardContainer blindCard = Instantiate(blindCardContainer, spawnpoints[currentCardIndex].transform);
         blindCard.prefabCard = randomizedCards[currentCardIndex].prefabCard;
         currentCardIndex++;
-        
-        blindCard.prefabCard.Use();
-        cardUI.AddCard(blindCard.prefabCard);
+
+        if (blindCard.prefabCard is TimeCard tc)
+        {
+            cardUI.AddCard(tc);   
+        }
+        else blindCard.prefabCard.Use();
     }
 
     public void ShowCanvas()

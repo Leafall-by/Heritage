@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Blind : Card
+public class Blind : TimeCard
 {
-    public int DayDuration;
+    private BlindController controller;
+    
     public override void Use()
     {
-        Debug.Log("Blind");
+        controller = FindObjectOfType<BlindController>();
+        controller.StartBlind(this);
+    }
 
-        CardUI cardUI = FindObjectOfType<CardHub>().cardUI;
-        Card blind = cardUI.GetCards().FirstOrDefault(x => x is Blind);
-        if (blind != null)
-        {
-            cardUI.DeleteCard(blind);
-        }
-        
-        FindObjectOfType<BlindController>().StartBlind(this);
+    public override void CancelAction()
+    {
+        controller.StopBlind();
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5357207627436092176}
   - component: {fileID: 8901244606697366016}
   m_Layer: 5
-  m_Name: Leg
+  m_Name: Puddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,13 +62,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3602e7dc191b36742bc2adb568251b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: Leg
+  cardName: Puddle
   cardDescrtiption: "\u0417\u0434\u0435\u0441\u044C \u0431\u0443\u0434\u0435\u0442
     \u043A\u0430\u043A\u043E\u0435-\u043B\u0438\u0431\u043E \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435"
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
   BaseSprite: {fileID: 21300000, guid: b2ddf609f71b4e348969abbce1c9bdcd, type: 3}
   name: {fileID: 562147069674884336}
   description: {fileID: 2136756328068725629}
+  dayDuration: 2
   timeCoefficient: 50
 --- !u!114 &5357207627436092176
 MonoBehaviour:
@@ -187,7 +188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Leg
+  m_text: Puddle
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49371023bc8d72f4ab37e3972f8d16b3, type: 2}
   m_sharedMaterial: {fileID: 3487637784548302755, guid: 49371023bc8d72f4ab37e3972f8d16b3, type: 2}

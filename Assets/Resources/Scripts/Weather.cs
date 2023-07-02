@@ -10,4 +10,9 @@ public class Weather : MonoBehaviour
     {
         IsRain = true;
     }
+
+    public void StopRain()
+    {
+        IsRain = false;
+    }
 }

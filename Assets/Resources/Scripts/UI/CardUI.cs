@@ -1,25 +1,57 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CardUI : MonoBehaviour
 {
-    public UnityEvent<Card> CardAdded;
+    public UnityEvent<TimeCard> CardAdded;
     [SerializeField] private GameObject canvas;
     [SerializeField] private GameObject content;
-    private List<Card> cards = new List<Card>();
-    
-    
-    public void AddCard(Card cardPrefab)
+    [SerializeField] private DayChanger changer;
+    private List<TimeCard> cards = new List<TimeCard>();
+
+    private void Start()
     {
-        Card card = Instantiate(cardPrefab, content.transform);
-        cards.Add(card); 
+        changer.DayChanged.AddListener(DecreaseDay);
+    }
+
+    public void AddCard(TimeCard cardPrefab)
+    {
+        TimeCard sameCard = cards.FirstOrDefault(x => x.GetType() == cardPrefab.GetType());
+        if ( sameCard != null)
+        {
+            DeleteCard(sameCard);
+        }
+        
+        TimeCard card = Instantiate(cardPrefab, content.transform);
+        cards.Add(card);
+        card.Use();
         CardAdded?.Invoke(card);
     }
 
-    public void DeleteCard(Card card)
+    private void DecreaseDay()
+    {
+        List<TimeCard> cardForDelete = new List<TimeCard>();
+        foreach (var card in cards)
+        {
+            card.DecreaseDuration();
+
+            if (card.dayDuration <= 0)
+            {
+                cardForDelete.Add(card);
+            }
+        }
+
+        foreach (var deleteCard in cardForDelete)
+        {
+            DeleteCard(deleteCard);
+        }
+    }
+
+    public void DeleteCard(TimeCard card)
     {
         cards.Remove(card);
         Destroy(card.gameObject);
@@ -35,7 +67,7 @@ public class CardUI : MonoBehaviour
         canvas.SetActive(false);
     }
 
-    public void HideCard(Card card)
+    public void HideCard(TimeCard card)
     {
         card.HideCard();
     }
@@ -48,7 +80,7 @@ public class CardUI : MonoBehaviour
         }
     }
 
-    public List<Card> GetCards()
+    public List<TimeCard> GetCards()
     {
         return cards;
     }

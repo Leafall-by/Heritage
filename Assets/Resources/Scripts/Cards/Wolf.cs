@@ -6,7 +6,6 @@ public class Wolf : Card
 {
     public override void Use()
     {
-        Debug.Log("Wolf");
         PlayerStats stats = FindObjectOfType<PlayerStats>();
         PlayerFood food = stats.PlayerFood;
 

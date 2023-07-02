@@ -1,19 +1,18 @@
+using System.Linq;
 using UnityEngine;
 
-public class Eloquence : Card
+public class Eloquence : TimeCard
 {
     private ShopController controller;
     [SerializeField] private float discount;
     public override void Use()
     {
         controller = FindObjectOfType<ShopController>();
-        Debug.Log(controller);
+        
         controller.Discount = discount;
-
-        FindObjectOfType<DayChanger>().DayChanged.AddListener(DisableCard);
     }
 
-    private void DisableCard()
+    public override void CancelAction()
     {
         controller.Discount = 0;
     }

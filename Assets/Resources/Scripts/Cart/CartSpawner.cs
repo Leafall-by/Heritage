@@ -19,7 +19,6 @@ public class CartSpawner : MonoBehaviour
     {
         if (randomizer.IsSpawn())
         {
-            Debug.Log("Телега приехала");
             Cart cart = Instantiate(randomizer.GetCart(), _spawnPoint.transform);
             return cart;
         }

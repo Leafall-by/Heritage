@@ -10,13 +10,11 @@ public class BlindController : MonoBehaviour
     [SerializeField] private Image blackCard;
     [SerializeField] private CardUI cardUI;
     [SerializeField] private CardGiverUI cardGiver;
-    [SerializeField] private DayChanger dayChanger;
-    private int dayDuration;
+    
     private Card activedCard;
 
     private void Start()
     {
-        dayChanger.DayChanged.AddListener(DecreaseDuration); 
         cardUI.CardAdded.AddListener(HideCardInInventory);
     }
 
@@ -24,7 +22,6 @@ public class BlindController : MonoBehaviour
     {
         activedCard = card;
         cardGiver.IsBlind = true;
-        dayDuration = card.DayDuration;
         HideCardsInInventory();
     }
 
@@ -32,11 +29,11 @@ public class BlindController : MonoBehaviour
     {
         foreach (var card in cardUI.GetCards())
         {
-            cardUI.HideCard(card);   
+            HideCardInInventory(card);
         }
     }
 
-    private void HideCardInInventory(Card card)
+    private void HideCardInInventory(TimeCard card)
     {
         if (activedCard == null || card is Blind)
         {
@@ -51,17 +48,7 @@ public class BlindController : MonoBehaviour
         cardUI.EnableCards();
     }
 
-    private void DecreaseDuration()
-    {
-        dayDuration--;
-
-        if (dayDuration == 0)
-        {
-            StopBlind();
-        }
-    }
-
-    private void StopBlind()
+    public void StopBlind()
     {
         activedCard = null;
         cardGiver.IsBlind = false;

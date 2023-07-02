@@ -69,6 +69,7 @@ MonoBehaviour:
   BaseSprite: {fileID: 21300000, guid: 5bd370fc74a1b264f8a1daca1602e117, type: 3}
   name: {fileID: 2135115052319562462}
   description: {fileID: 561576203123551571}
+  dayDuration: 2
 --- !u!114 &5779466254220803390
 MonoBehaviour:
   m_ObjectHideFlags: 0

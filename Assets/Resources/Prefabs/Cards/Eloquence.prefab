@@ -69,6 +69,7 @@ MonoBehaviour:
   BaseSprite: {fileID: 21300000, guid: f0c474001f597d54ea6dc93de2f748df, type: 3}
   name: {fileID: 578616199883169739}
   description: {fileID: 1327934176346220614}
+  dayDuration: 2
   discount: 50
 --- !u!114 &5013089547961661483
 MonoBehaviour:

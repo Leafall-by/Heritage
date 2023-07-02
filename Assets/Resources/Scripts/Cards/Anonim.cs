@@ -6,6 +6,5 @@ public class Anonim : Card
 {
     public override void Use()
     {
-        Debug.Log("Anonim");
     }
 }

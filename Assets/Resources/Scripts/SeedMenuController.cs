@@ -13,6 +13,8 @@ public class SeedMenuController : MonoBehaviour
     [SerializeField] private Cell[] cells;
     [SerializeField] private ToolCell toolCell;
 
+    public bool IsCanSeed = true;
+
     private void Start()
     {
         foreach (var cell in cells)
@@ -70,6 +72,11 @@ public class SeedMenuController : MonoBehaviour
 
     private void UseSeed(Item item)
     {
+        if (IsCanSeed == false)
+        {
+            return;
+        }
+        
         foreach (var cell in cells)
         {
             if (controller.IsAvaiable() == false)

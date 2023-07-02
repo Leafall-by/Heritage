@@ -6,6 +6,5 @@ public class Message : Card
 {
     public override void Use()
     {
-        Debug.Log("Message");
     }
 }
