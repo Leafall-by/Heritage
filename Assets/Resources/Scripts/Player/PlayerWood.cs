@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerWood : MonoBehaviour
 {
-    private int wood;
+    public int wood { get; set; }
 
     public Action<int> WoodIsChanged;
     

@@ -6,26 +6,25 @@ using UnityEngine;
 public class Death : MonoBehaviour
 {
     [SerializeField] private GameObject deathCanvas;
+    [SerializeField] private DayChanger dayChanger;
     
     [SerializeField] private PlayerStats playerStats;
 
     private void Start()
     {
-        playerStats.PlayerFood.FoodChanged += TryDie;
-        playerStats.PlayerWater.WaterIsChanged += TryDie;
-        playerStats.PlayerWood.WoodIsChanged += TryDie;
+        dayChanger.DayChanged.AddListener(TryDie);
     }
 
-    private void TryDie(int resource)
+    private void TryDie()
     {
-        if (resource < 0)
+        if (playerStats.PlayerWater.water < 0 || playerStats.PlayerFood.Food < 0 || playerStats.PlayerWood.wood < 0)
         {
             Die();
         }
     }
 
     private void Die()
-    {
+    { 
         deathCanvas.SetActive(true);
     }
 }

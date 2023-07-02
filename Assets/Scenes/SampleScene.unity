@@ -1337,6 +1337,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa00f8e97c90ff6479d013933cbbe262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CardAdded:
+    m_PersistentCalls:
+      m_Calls: []
   canvas: {fileID: 122224860}
   content: {fileID: 1218402440}
 --- !u!1 &168648203
@@ -4029,7 +4032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &406780843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14428,6 +14431,7 @@ Transform:
   - {fileID: 1946236540}
   - {fileID: 64357326}
   - {fileID: 1072972948}
+  - {fileID: 1359192654}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15552,6 +15556,7 @@ MonoBehaviour:
   - {fileID: 4450056104192369142, guid: 568df3eb5cae1ba4e8ec33d9bcf8ba36, type: 3}
   - {fileID: 8906017063622564220, guid: 1a2d66116dede434d9b6751534d9583f, type: 3}
   - {fileID: 8220220302263019691, guid: 2d98412cd8ad0d24e942aa14f75ed110, type: 3}
+  blindCardContainer: {fileID: 7819327707720684287, guid: 60ad14b4dff843c47aa48dc82a589808, type: 3}
   spawnpoints:
   - {fileID: 325383297}
   - {fileID: 1712586032}
@@ -15727,6 +15732,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1359192653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1359192654}
+  - component: {fileID: 1359192655}
+  m_Layer: 0
+  m_Name: BlindController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1359192654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359192653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1125467343}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1359192655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359192653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea72a17b43c61046ad1033ec36cdf7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackCard: {fileID: 1285378248228372522, guid: 3c8ec427bcda36a4085002e357093277, type: 3}
+  cardUI: {fileID: 122224865}
+  cardGiver: {fileID: 1330692592}
+  dayChanger: {fileID: 940976565}
 --- !u!1 &1361150666
 GameObject:
   m_ObjectHideFlags: 0
@@ -15978,6 +16031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathCanvas: {fileID: 801430938}
+  dayChanger: {fileID: 940976565}
   playerStats: {fileID: 1585743467}
 --- !u!1 &1393410834
 GameObject:
@@ -16861,8 +16915,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0414\u043E\u0440\u043E\u0433\u043E\u0439 \u043C\u0430\u043A\u0441\u0438\u043C,\n\u042F
-    \u0445\u043E\u0447\u0443 \u0432 \u0441\u0432\u043E\u0451\u043C \u0437\u0430\u0432\u0435\u0449\u0430\u043D\u0438\u0438
+  m_text: "\u0414\u043E\u0440\u043E\u0433\u043E\u0439 ,\n\u042F \u0445\u043E\u0447\u0443
+    \u0432 \u0441\u0432\u043E\u0451\u043C \u0437\u0430\u0432\u0435\u0449\u0430\u043D\u0438\u0438
     \u043E\u0442\u0434\u0430\u0442\u044C \u0442\u0435\u0431\u0435 \u0441\u0432\u043E\u0439
     \u0434\u043E\u043C. \u042F \u043F\u043E\u043C\u043D\u044E, \u0447\u0442\u043E
     \u0442\u044B \u0431\u0435\u0437\u0434\u043E\u043C\u043D\u044B\u0439, \u0434\u0435\u0440\u0436\u0438
@@ -23476,7 +23530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 65}
   m_AnchorMin: {x: 0.17600001, y: 0.102000006}
   m_AnchorMax: {x: 0.569, y: 0.4903771}
-  m_AnchoredPosition: {x: -3.8995056, y: 41.327747}
+  m_AnchoredPosition: {x: -3.8995056, y: 41.327858}
   m_SizeDelta: {x: -47.433792, y: -47.658478}
   m_Pivot: {x: 0.5, y: 0.0000001359731}
 --- !u!114 &2122582957

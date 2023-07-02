@@ -10,10 +10,11 @@ public class Leg : Card
     {
         Debug.Log("Leg");
 
-        Card legCard = FindObjectOfType<CardHub>().cardUI.GetCards().FirstOrDefault(x => x is Leg);
-        if (legCard != null)
+        CardUI cardUI = FindObjectOfType<CardHub>().cardUI;
+        Card leg = cardUI.GetCards().FirstOrDefault(x => x is Leg);
+        if (leg != null)
         {
-            Destroy(legCard.gameObject);
+            cardUI.DeleteCard(leg);
         }
 
         TimeController controller = FindObjectOfType<TimeController>();

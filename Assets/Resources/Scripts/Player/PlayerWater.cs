@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerWater : MonoBehaviour
 {
-    private int water;
+    public int water { get; private set; }
 
     public Action<int> WaterIsChanged;
     

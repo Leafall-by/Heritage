@@ -9,11 +9,13 @@ public class Field : Card
     {
         Debug.Log("Field");
 
-        Card field = FindObjectOfType<CardHub>().cardUI.GetCards().FirstOrDefault(x => x is Field);
+        CardUI cardUI = FindObjectOfType<CardHub>().cardUI;
+        Card field = cardUI.GetCards().FirstOrDefault(x => x is Field);
         if (field != null)
         {
-            Destroy(field.gameObject);
+            cardUI.DeleteCard(field);
         }
+        
         
         Weather weather = FindObjectOfType<Weather>();
         weather.StartRain();
