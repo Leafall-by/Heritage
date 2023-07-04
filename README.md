@@ -180,6 +180,7 @@ ___
 - [ ] Воду можно взять из реки
 - [ ] Еду можно купить, если у игрока есть оружие, он может победить животное и тем самым добыть еду.
 - [ ] В битве преследуется пошаговая боевка
+
 ![пример](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmpbaU-EwAIQOvjfdX6GKBXMG883EW58EB59MPQxBB24fnx2RdjKZXlxEpXgB2EszrIV4&usqp=CAU)
 ![пример](https://i.ytimg.com/vi/aQe1QXjISNQ/maxresdefault.jpg)
 
