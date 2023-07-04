@@ -6,6 +6,9 @@ public class MessageAnimation : MonoBehaviour
 {
     private Animator _animator;
 
+    [SerializeField] private GameObject messageFront;
+    [SerializeField] private GameObject messageBack;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
