@@ -13,14 +13,15 @@ public class MoneySpawner : MonoBehaviour
 
     private const float SPAWN_DELAY = 0.3f;
 
-    private Stack<GameObject> golds;
+    private List<GameObject> golds;
 
     private void Start()
     {
         wallet.MoneyIsAdded += SpawnMoney;
         wallet.MoneyIsRemoved += RemoveMoney;
+        wallet.MoneyGameObjectIsRemoved += RemoveGameObjectMoney;
 
-        golds = new Stack<GameObject>();
+        golds = new List<GameObject>();
     }
 
     public void SpawnMoney(int countMoney)
@@ -33,7 +34,7 @@ public class MoneySpawner : MonoBehaviour
         for (int i = 0; i < countMoney; i++)
         {
             GameObject gold = Instantiate(moneyPrefab);
-            golds.Push(gold);
+            golds.Add(gold);
             walletUI.SpawnMoney(gold);
             yield return new WaitForSeconds(SPAWN_DELAY);
         }
@@ -43,8 +44,16 @@ public class MoneySpawner : MonoBehaviour
     {
         for (int i = 0; i < countMoney; i++)
         {
-            GameObject gold = golds.Pop();
+            GameObject gold = golds[golds.Count-1];
+            golds.Remove(golds[golds.Count-1]);
             walletUI.RemoveGold(gold);
         }
     }
+
+    private void RemoveGameObjectMoney(GameObject gold)
+    {
+        golds.Remove(gold);
+        walletUI.RemoveGold(gold);
+    }
+
 }

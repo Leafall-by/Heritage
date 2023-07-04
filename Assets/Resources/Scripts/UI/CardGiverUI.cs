@@ -7,6 +7,7 @@ public class CardGiverUI : MonoBehaviour
 {
     [SerializeField] private Canvas canvas;
     [SerializeField] private CardUI cardUI;
+    [SerializeField] private CardDescriptionUI descUI;
     [Space]
     [SerializeField] private CardContainer[] allCardContainer;
     [SerializeField] private CardContainer blindCardContainer;
@@ -35,6 +36,7 @@ public class CardGiverUI : MonoBehaviour
         
         CardContainer card = Instantiate(randomizedCards[currentCardIndex], spawnpoints[currentCardIndex].transform);
         currentCardIndex++;
+        SubscribeCard(card);
 
         if (card.prefabCard is TimeCard tc)
         {
@@ -51,6 +53,7 @@ public class CardGiverUI : MonoBehaviour
             currentCardIndex++;
             
             cardUI.AddCard((TimeCard)card.prefabCard);
+            SubscribeCard(card);
 
             return;
         }
@@ -58,12 +61,18 @@ public class CardGiverUI : MonoBehaviour
         CardContainer blindCard = Instantiate(blindCardContainer, spawnpoints[currentCardIndex].transform);
         blindCard.prefabCard = randomizedCards[currentCardIndex].prefabCard;
         currentCardIndex++;
+        SubscribeCard(blindCard);
 
         if (blindCard.prefabCard is TimeCard tc)
         {
             cardUI.AddCard(tc);   
         }
         else blindCard.prefabCard.Use();
+    }
+
+    private void SubscribeCard(CardContainer card)
+    {
+        card.OnClick.AddListener(OpenDescriptionUI);
     }
 
     public void ShowCanvas()
@@ -79,5 +88,14 @@ public class CardGiverUI : MonoBehaviour
         {
             Destroy(spawnpoint.GetChild(0).gameObject);
         }
+    }
+
+    private void OpenDescriptionUI(CardContainer card)
+    {
+        if (card is BlackContainer)
+        {
+            return;
+        }
+        descUI.EnableDescriptionUI(card.prefabCard);
     }
 }

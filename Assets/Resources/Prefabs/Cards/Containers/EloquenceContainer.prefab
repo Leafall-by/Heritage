@@ -479,6 +479,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCard: {fileID: 802163018537396544, guid: 7c39152567007b749905bb2660532350, type: 3}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &1956251769567788457
 Animator:
   serializedVersion: 5
@@ -892,7 +895,8 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5207269329347504011, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
 --- !u!224 &4709526066098952229 stripped
 RectTransform:

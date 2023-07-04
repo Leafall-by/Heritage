@@ -13,6 +13,8 @@ public class BlindController : MonoBehaviour
     
     private Card activedCard;
 
+    public bool IsBlind;
+
     private void Start()
     {
         cardUI.CardAdded.AddListener(HideCardInInventory);
@@ -20,6 +22,8 @@ public class BlindController : MonoBehaviour
 
     public void StartBlind(Blind card)
     {
+        IsBlind = true;
+        
         activedCard = card;
         cardGiver.IsBlind = true;
         HideCardsInInventory();
@@ -50,6 +54,8 @@ public class BlindController : MonoBehaviour
 
     public void StopBlind()
     {
+        IsBlind = false;
+        
         activedCard = null;
         cardGiver.IsBlind = false;
         ShowCardInInventory();

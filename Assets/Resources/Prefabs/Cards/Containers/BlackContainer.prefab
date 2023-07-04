@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 563800124279601160}
-  - component: {fileID: 7819327707720684287}
+  - component: {fileID: 3075061369619144297}
   - component: {fileID: 6645154404838937146}
   - component: {fileID: 6318547432928653353}
   - component: {fileID: 2198853481917711345}
@@ -43,7 +43,7 @@ RectTransform:
   m_AnchoredPosition: {x: -213.25156, y: 279}
   m_SizeDelta: {x: -233.5101, y: -12.25}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7819327707720684287
+--- !u!114 &3075061369619144297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -52,10 +52,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 239233517043821527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6cf099e82b14446ab837c2811b3a92, type: 3}
+  m_Script: {fileID: 11500000, guid: e999713f809d72944a24735d62c6c307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCard: {fileID: 0}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &6645154404838937146
 Animator:
   serializedVersion: 5

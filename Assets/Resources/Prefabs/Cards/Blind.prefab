@@ -62,13 +62,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2765f2f38c6ac0e49a40ac39417e0f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropChance: 1
   cardName: Blind
   cardDescrtiption: "\u0417\u0434\u0435\u0441\u044C \u0431\u0443\u0434\u0435\u0442
     \u043A\u0430\u043A\u043E\u0435-\u043B\u0438\u0431\u043E \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435"
+  fullDesc: 
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
   BaseSprite: {fileID: 21300000, guid: 61aea76c5788b8543918db929ef1305f, type: 3}
   name: {fileID: 5966453279747461123}
   description: {fileID: 5235281607080470414}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
   dayDuration: 2
 --- !u!114 &2258735092503885795
 MonoBehaviour:

@@ -9,6 +9,7 @@ public class Wallet : MonoBehaviour
 
     public Action<int> MoneyIsAdded;
     public Action<int> MoneyIsRemoved;
+    public Action<GameObject> MoneyGameObjectIsRemoved;
 
     public void AddGold(int gold)
     {
@@ -27,5 +28,12 @@ public class Wallet : MonoBehaviour
         this.gold -= gold;
         
         MoneyIsRemoved?.Invoke(gold);
+    }
+
+    public void RemoveGold(GameObject money)
+    {
+        gold--;
+        
+        MoneyGameObjectIsRemoved?.Invoke(money);
     }
 }

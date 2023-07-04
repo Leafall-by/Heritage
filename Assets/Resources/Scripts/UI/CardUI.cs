@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class CardUI : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CardUI : MonoBehaviour
     [SerializeField] private GameObject canvas;
     [SerializeField] private GameObject content;
     [SerializeField] private DayChanger changer;
+    [SerializeField] private CardDescriptionUI descUI;
     private List<TimeCard> cards = new List<TimeCard>();
 
     private void Start()
@@ -30,6 +32,8 @@ public class CardUI : MonoBehaviour
         cards.Add(card);
         card.Use();
         CardAdded?.Invoke(card);
+        
+        card.OnClick.AddListener(OpenDescriptionUI);
     }
 
     private void DecreaseDay()
@@ -54,6 +58,7 @@ public class CardUI : MonoBehaviour
     public void DeleteCard(TimeCard card)
     {
         cards.Remove(card);
+        card.CancelAction();
         Destroy(card.gameObject);
     }
     
@@ -83,5 +88,14 @@ public class CardUI : MonoBehaviour
     public List<TimeCard> GetCards()
     {
         return cards;
+    }
+
+    private void OpenDescriptionUI(Card card)
+    {
+        if (card.gameObject.GetComponent<Image>().sprite == card.BlackCardSprite)
+        {
+            return;
+        }
+        descUI.EnableDescriptionUI(card);
     }
 }

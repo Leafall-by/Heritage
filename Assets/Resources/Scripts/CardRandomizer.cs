@@ -31,8 +31,34 @@ public class CardRandomizer
 
     private CardContainer GetRandomCard()
     {
-        CardContainer randomCard = allCards[Random.Range(0, allCards.Length)];
+        List<CardContainer> availableCards = new List<CardContainer>();
+        
+        int sum = 0;
+        foreach (var card in allCards)
+        {
+            if ((card.prefabCard is IDependet dependet && !dependet.IsCan()) || IsContains(card))
+            {
+                continue;
+            }
+            sum += card.prefabCard.dropChance;
+            availableCards.Add(card);
+        }
+        
+        int random = Random.Range(0, sum);
+        for (int i = 0; i < availableCards.Count; i++)
+        {
+            random -= availableCards[i].prefabCard.dropChance;
+            if (random <= 0)
+            {
+                return availableCards[i];
+            }
+        }
 
+        throw new NullReferenceException();
+    }
+
+    private bool IsContains(CardContainer randomCard)
+    {
         bool isContains = false;
         foreach (var card in randomizedCards)
         {
@@ -42,19 +68,7 @@ public class CardRandomizer
             }
         }
 
-        if (isContains == false)
-        {
-            if (randomCard.prefabCard is IDependet dependet)
-            {
-                if (dependet.IsCan())
-                {
-                    return randomCard;
-                }
-                else return GetRandomCard();
-            }
-            return randomCard;
-        }
-        return GetRandomCard();
+        return isContains;
     }
     
 }
