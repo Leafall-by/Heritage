@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lighting : Card
+public class Lighting : Card, IDependet
 {
     [SerializeField] private int woodForMinus;
     [SerializeField] private int waterForMinus;
@@ -17,5 +17,10 @@ public class Lighting : Card
             stats.PlayerWood.RemoveWood(woodForMinus);
             stats.PlayerWater.RemoveWater(waterForMinus);
         }
+    }
+
+    public bool IsCan()
+    {
+        return FindObjectOfType<Weather>().IsRain;
     }
 }
