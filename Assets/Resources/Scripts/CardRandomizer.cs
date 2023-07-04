@@ -44,9 +44,16 @@ public class CardRandomizer
 
         if (isContains == false)
         {
+            if (randomCard.prefabCard is IDependet dependet)
+            {
+                if (dependet.IsCan())
+                {
+                    return randomCard;
+                }
+                else return GetRandomCard();
+            }
             return randomCard;
         }
-
         return GetRandomCard();
     }
     

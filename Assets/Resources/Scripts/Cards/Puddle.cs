@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Puddle : TimeCard
+public class Puddle : TimeCard, IDependet
 {
     [SerializeField] private int timeCoefficient;
     private TimeController controller;
@@ -17,5 +17,10 @@ public class Puddle : TimeCard
     public override void CancelAction()
     {
         controller.Сoefficient -= timeCoefficient;
+    }
+
+    public bool IsCan()
+    {
+        return FindObjectOfType<Weather>().IsRain;
     }
 }
