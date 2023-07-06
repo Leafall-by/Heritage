@@ -6,36 +6,50 @@ using Random = UnityEngine.Random;
 public class CloudSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _clouds;
-    [SerializeField] private GameObject _spawnPoint;
+    [SerializeField] private Transform[] _spawnPoints;
+    [SerializeField] private Weather _weather;
     private const float SPAWN_CLOUD_TIME = 16f;
+    private int _lastSpawnIndex = -1;
+    private int _lastSpawnObjectIndex = -1;
 
     private Coroutine _coroutine;
 
     private void Update()
     {
-        if (_coroutine == null)
+        if (_coroutine == null && _weather.IsRain == false)
         {
             _coroutine = StartCoroutine(SpawnCloud());
         }
     }
 
+
+    
     private IEnumerator SpawnCloud()
     {
-        int num = Random.Range(0, _clouds.Length - 1);
+        int num = Random.Range(0, _clouds.Length);
+        while (_lastSpawnObjectIndex == num)
+        {
+            num = Random.Range(0, _clouds.Length);
+        }
 
-        Vector3 vec = _spawnPoint.transform.position;
-
-        vec.y += Random.Range(-150f, 0f);
+        _lastSpawnObjectIndex = num;
         
-        GameObject cloud = Instantiate(_clouds[num], vec,  Quaternion.identity);
+        int randomSpawnPoint = Random.Range(0, _spawnPoints.Length);
+        while (_lastSpawnIndex == randomSpawnPoint)
+        {
+            randomSpawnPoint = Random.Range(0, _spawnPoints.Length);
+        }
 
+        _lastSpawnIndex = randomSpawnPoint;
+        
+        GameObject cloud = Instantiate(_clouds[num], _spawnPoints[randomSpawnPoint]);
+        cloud.GetComponent<CloudMove>().SetWeather(_weather);
         var image = cloud.GetComponent<Image>();
         
         var imageColor = image.color;
         imageColor.a = Random.Range(0.8f, 1f);
         image.color = imageColor;
         
-        cloud.transform.SetParent(_spawnPoint.transform);
         yield return new WaitForSeconds(SPAWN_CLOUD_TIME);
         _coroutine = null;
     }

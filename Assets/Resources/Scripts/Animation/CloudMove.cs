@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class CloudMove : MonoBehaviour
 {
-    private int _lifeTime = 100;
+    private float _lifeTime = 94f;
 
     private Coroutine _coroutine;
 
@@ -18,6 +18,15 @@ public class CloudMove : MonoBehaviour
         StartCoroutine(TickLife());
     }
 
+    public void SetWeather(Weather weather)
+    {
+        weather.StartRainEvent.AddListener(StartRain);
+    }
+
+    private void StartRain()
+    {
+        Destroy(gameObject);
+    }
     private void Update()
     {
         if (_coroutine != null)
@@ -44,7 +53,7 @@ public class CloudMove : MonoBehaviour
         float randSpeed = Random.Range(1f, 1.6f);
         Vector3 direction = dir == -1 ? Vector3.left : Vector3.right;
         
-        transform.Translate(direction * (Time.deltaTime * randSpeed * 120));
+        transform.Translate(direction * (Time.deltaTime * randSpeed * 5));
         yield return new WaitForSeconds(.01f);
         _coroutine = null;
     }

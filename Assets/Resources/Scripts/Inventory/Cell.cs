@@ -11,6 +11,7 @@ public class Cell : MonoBehaviour, IPointerClickHandler
     public Action<Item> OnUsed;
     
     [SerializeField] private Image image;
+    [SerializeField] private Image shadowImage;
     [SerializeField] private TextMeshProUGUI text;
     
     private ItemState item;
@@ -30,6 +31,7 @@ public class Cell : MonoBehaviour, IPointerClickHandler
         this.item = item;
 
         image.enabled = true;
+        shadowImage.enabled = true;
         
         SetFields();
     }
@@ -46,6 +48,7 @@ public class Cell : MonoBehaviour, IPointerClickHandler
         
         text.text = "";
         image.enabled = false;
+        shadowImage.enabled = false;
     }
 
     public void OnPointerClick(PointerEventData eventData)

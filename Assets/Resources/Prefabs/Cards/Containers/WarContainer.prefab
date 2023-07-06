@@ -56,6 +56,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCard: {fileID: 1154488929259089955, guid: 2cbfa2f8767dc934abcdc1a4204f0ad4, type: 3}
+  _audio: {fileID: 3761850624571089524}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &5971946658332342437
 Animator:
   serializedVersion: 5
@@ -910,5 +914,10 @@ PrefabInstance:
 --- !u!224 &620657029814328617 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1721568002788996266, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+  m_PrefabInstance: {fileID: 2267906274232641923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &3761850624571089524 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -6102940944663835657, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
   m_PrefabInstance: {fileID: 2267906274232641923}
   m_PrefabAsset: {fileID: 0}

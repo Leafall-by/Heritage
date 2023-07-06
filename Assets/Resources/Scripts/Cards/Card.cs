@@ -9,12 +9,11 @@ using UnityEngine.UI;
 
 public abstract class Card : MonoBehaviour, IPointerClickHandler
 {
-    public int dropChance;
     [SerializeField] private string cardName;
     [SerializeField] private string cardDescrtiption;
-
     public string fullDesc;
-    
+    public int dropChance;
+
     public Sprite BlackCardSprite;
     public Sprite BaseSprite;
     
@@ -37,9 +36,16 @@ public abstract class Card : MonoBehaviour, IPointerClickHandler
         gameObject.GetComponent<Image>().sprite = BaseSprite;
     }
 
-    abstract public void Use();
     public void OnPointerClick(PointerEventData eventData)
     {
+        AudioSource audio = GetComponent<AudioSource>();
+        if (audio != null)
+        {
+            audio.Play();
+        }
         OnClick?.Invoke(this);
     }
+    
+    abstract public void Use();
+
 }
