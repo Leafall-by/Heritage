@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 4374817548631308783}
   - component: {fileID: 1247993302514821601}
   - component: {fileID: -1608112744640948053}
+  - component: {fileID: 8001335095873020178}
   m_Layer: 5
   m_Name: Treasure
   m_TagString: Untagged
@@ -509,3 +510,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8001335095873020178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8452716578896657810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7b7f20a2022a7164893f37c9a77a28ed
+    m_TableEntryReference:
+      m_KeyId: 29046542422016
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Card Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Card
+  m_TableCollectionNameGuidString: 7b7f20a2022a7164893f37c9a77a28ed
+  m_Entries:
+  - m_Id: 28358672371712
+    m_Key: Card_Wolf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28861036744704
+    m_Key: Card_Anonim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28935854739456
+    m_Key: Card_War
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28985590796288
+    m_Key: Card_Rat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29046542422016
+    m_Key: Card_Treasure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31454752395264
+    m_Key: Card_Rain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58740373442560
+    m_Key: Card_Arrow
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3751787829015609373
+  references:
+    version: 2
+    RefIds:
+    - rid: 3751787829015609373
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1688724138020

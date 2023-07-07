@@ -53,6 +53,7 @@ public class Cell : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("Clicked");
         OnUsed?.Invoke(item.item);
     }
 }

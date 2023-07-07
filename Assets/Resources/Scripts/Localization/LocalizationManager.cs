@@ -3,15 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class LocalizationManager : MonoBehaviour
 {
-    private string russianLanguage;
+    public int CurrentLanguage;
 
-    private int current_language;
-    
-    public void Awake()
+    public void SetLanguage(int languageNumber)
     {
-        throw new NotImplementedException();
+        StartCoroutine(SetLanguageCoroutine(languageNumber));
+    }
+    
+    private IEnumerator SetLanguageCoroutine(int languageNumber)
+    {
+        yield return LocalizationSettings.InitializationOperation;
+
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[languageNumber];
     }
 }

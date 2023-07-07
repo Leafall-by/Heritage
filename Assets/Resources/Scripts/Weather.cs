@@ -14,11 +14,20 @@ public class Weather : MonoBehaviour
     
     public readonly UnityEvent StartRainEvent = new UnityEvent();
 
+    private Color color = new Color(0.6f, 0.6f, 0.6f);
+
     public void StartRain()
     {
         IsRain = true;
         sky.color = new Color(0.3f, 0.3f, 0.3f);
-        SetColorOnElements(new Color(0.6f, 0.6f,0.6f));
+        SetColorOnElements(color);
+
+        Cart cart = FindObjectOfType<Cart>();
+        if (cart != null)
+        {
+            cart.GetComponent<Image>().color = color;
+        }
+        
         StartRainEvent.Invoke();
         rain.Play();
     }

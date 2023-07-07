@@ -68,7 +68,7 @@ MonoBehaviour:
     \u043A\u0430\u043A\u043E\u0435-\u043B\u0438\u0431\u043E \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435"
   fullDesc: "\u041A\u0440\u0443\u0442\u043E\u0435 \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435
     \u0434\u043B\u044F \u043A\u0440\u0443\u0442\u043E\u0439 \u043A\u0430\u0440\u0442\u044B"
-  dropChance: 99
+  dropChance: 5
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
   BaseSprite: {fileID: 21300000, guid: 5bd370fc74a1b264f8a1daca1602e117, type: 3}
   name: {fileID: 2135115052319562462}
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 5895546693701208388}
   - component: {fileID: 1912939328567148684}
   - component: {fileID: 2135115052319562462}
+  - component: {fileID: 5134234421262455477}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -359,6 +360,34 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5134234421262455477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8231870932875473126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:7b7f20a2022a7164893f37c9a77a28ed
+    m_TableEntryReference:
+      m_KeyId: 58740373442560
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &8276314179071813638
 GameObject:
   m_ObjectHideFlags: 0

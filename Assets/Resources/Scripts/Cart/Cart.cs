@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cart : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Cart : MonoBehaviour
     public void SetItems(Item[] items)
     {
         this.items = items;
+        
+        TrySetRainColor();
     }
 
     public void ShowShop()
@@ -23,5 +26,12 @@ public class Cart : MonoBehaviour
     public void SetShopController(ShopController controller)
     {
         this.controller = controller;
+    }
+
+    private void TrySetRainColor()
+    {
+        Weather weather = FindObjectOfType<Weather>();
+        if (weather.IsRain) 
+            GetComponent<Image>().color = new Color(0.6f, 0.6f, 0.6f);
     }
 }
