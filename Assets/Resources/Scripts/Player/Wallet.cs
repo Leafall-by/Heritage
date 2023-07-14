@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Wallet : MonoBehaviour
@@ -35,5 +33,10 @@ public class Wallet : MonoBehaviour
         gold--;
         
         MoneyGameObjectIsRemoved?.Invoke(money);
+    }
+
+    public void RemoveAllMoney()
+    {
+        RemoveGold(this.gold);
     }
 }

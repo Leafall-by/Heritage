@@ -1,30 +1,29 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class PlayerFood : MonoBehaviour
 {
     public int Food { get; private set; }
+    private const int MAX_FOOD = 50;
 
-    public event Action<int> FoodChanged;
+    public event Action<int> FoodIsChanged;
 
     public void AddFood(int food)
     {
         this.Food += food;
-        
-        FoodChanged?.Invoke(this.Food);
 
-        Debug.Log($"Еда: {this.Food}");
+        if (this.Food > MAX_FOOD)
+        {
+            this.Food = MAX_FOOD;
+        }
+        
+        FoodIsChanged?.Invoke(this.Food);
     }
 
     public void RemoveFood(int food)
     {
         this.Food -= food;
             
-        FoodChanged?.Invoke(this.Food);
-        
-        Debug.Log($"Еда: {this.Food}");
+        FoodIsChanged?.Invoke(this.Food);
     }
 }

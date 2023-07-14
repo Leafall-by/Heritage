@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -30,6 +28,7 @@ public class CardUI : MonoBehaviour
         
         TimeCard card = Instantiate(cardPrefab, content.transform);
         cards.Add(card);
+        card.Init();
         card.Use();
         CardAdded?.Invoke(card);
         
@@ -65,6 +64,11 @@ public class CardUI : MonoBehaviour
     public void ShowCards()
     {
         canvas.SetActive(true);
+
+        foreach (var card in cards)
+        {
+            card.animator.SetTrigger("Spawn");
+        }
     }
 
     public void CloseCanvas()

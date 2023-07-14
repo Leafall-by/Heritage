@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,7 +29,9 @@ public class Cart : MonoBehaviour
     private void TrySetRainColor()
     {
         Weather weather = FindObjectOfType<Weather>();
-        if (weather.IsRain) 
+        if (weather.IsRain)
+        {
             GetComponent<Image>().color = new Color(0.6f, 0.6f, 0.6f);
+        }
     }
 }

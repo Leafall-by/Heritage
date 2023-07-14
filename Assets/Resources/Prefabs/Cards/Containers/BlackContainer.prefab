@@ -56,6 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabCard: {fileID: 0}
+  _audio: {fileID: 0}
   OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -787,6 +788,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 563800124279601160}
     m_Modifications:
+    - target: {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5207269329347504011, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+    - target: {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Card, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 499073651626291973, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_text
       value: 

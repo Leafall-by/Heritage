@@ -788,6 +788,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2200504078825011232}
     m_Modifications:
+    - target: {fileID: -6102940944663835657, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 706e469124fcb9d4481980fe56aa17b8, type: 3}
+    - target: {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 404429150343168
+      objectReference: {fileID: 0}
+    - target: {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1454354505684239178, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_RootOrder
       value: 3

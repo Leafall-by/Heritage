@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,9 +6,6 @@ using UnityEngine.UI;
 
 public abstract class Card : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private string cardName;
-    [SerializeField] private string cardDescrtiption;
-    public string fullDesc;
     public int dropChance;
 
     public Sprite BlackCardSprite;
@@ -21,18 +15,26 @@ public abstract class Card : MonoBehaviour, IPointerClickHandler
     public TextMeshProUGUI description;
 
     public UnityEvent<Card> OnClick;
+    
+    public Animator animator;
 
+    public void Init()
+    {
+        animator = GetComponent<Animator>();
+    }
+    
     public void HideCard()
     {
-        name.text = "";
-        description.text = "";
+        name.enabled = false;
+        description.enabled = false;
         gameObject.GetComponent<Image>().sprite = BlackCardSprite;
+        
     }
     
     public void ShowCard()
     {
-        name.text = cardName;
-        description.text = cardDescrtiption;
+        name.enabled = true;
+        description.enabled = true;
         gameObject.GetComponent<Image>().sprite = BaseSprite;
     }
 

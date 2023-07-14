@@ -6,12 +6,9 @@ public class CartRandomizer
 
     private Item[] items;
 
-    private Cart cart;
-
-    public CartRandomizer(Item[] items, Cart cart)
+    public CartRandomizer(Item[] items)
     {
         this.items = items;
-        this.cart = cart;
     }
     
     public bool IsSpawn()
@@ -21,13 +18,7 @@ public class CartRandomizer
         return chance < PROCENT_CHANCE;
     }
 
-    public Cart GetCart()
-    {
-        cart.SetItems(RandomizeItems());
-        return cart;
-    }
-
-    private Item[] RandomizeItems()
+    public Item[] RandomizeItems()
     {
         Item[] itemsForSell = new Item[3];
 

@@ -788,6 +788,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3004196446244785096}
     m_Modifications:
+    - target: {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 403958985641984
+      objectReference: {fileID: 0}
+    - target: {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1454354505684239178, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: WithDoctor
   m_EditorClassIdentifier: 
   IsWas: 0
-  inputDialog: {fileID: 4900000, guid: 4938f47bffea69849b648d6ee47d7a0e, type: 3}
+  inputDialog: {fileID: 4900000, guid: cf96c6a9dddd2b04385ac3034c6c2ca4, type: 3}

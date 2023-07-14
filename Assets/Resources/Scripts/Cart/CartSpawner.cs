@@ -1,25 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CartSpawner : MonoBehaviour
 {
     [SerializeField] private Item[] items;
-    [SerializeField] private Cart cart;
+    [SerializeField] private Cart prefabCart;
     [SerializeField] private GameObject _spawnPoint;
     private CartRandomizer randomizer;
 
-    public void Init()
-    {
-        randomizer = new CartRandomizer(items, cart);
-    }
-
     public Cart TrySpawn()
     {
+        randomizer = new CartRandomizer(items);
+        
         if (randomizer.IsSpawn())
         {
-            Cart cart = Instantiate(randomizer.GetCart(), _spawnPoint.transform);
+            Cart cart = Instantiate(prefabCart, _spawnPoint.transform);
+            cart.SetItems(randomizer.RandomizeItems());
             return cart;
         }
         else return null; //TODO Ошибку, если телега не приехала

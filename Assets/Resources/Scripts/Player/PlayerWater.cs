@@ -1,27 +1,28 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerWater : MonoBehaviour
 {
-    public int water { get; private set; }
-
+    public int Water { get; private set; }
+    private const int MAX_WATER = 50;
+    
     public Action<int> WaterIsChanged;
     
     public void AddWater(int water)
     {
-        this.water += water;
-        WaterIsChanged?.Invoke(this.water);
+        this.Water += water;
+
+        if (Water > MAX_WATER)
+        {
+            Water = MAX_WATER;
+        }
         
-        Debug.Log($"Вода: {this.water}");
+        WaterIsChanged?.Invoke(this.Water);
     }
 
     public void RemoveWater(int water)
     {
-        this.water -= water;
-        WaterIsChanged?.Invoke(this.water);
-        
-        Debug.Log($"Вода: {this.water}");
+        this.Water -= water;
+        WaterIsChanged?.Invoke(this.Water);
     }
 }

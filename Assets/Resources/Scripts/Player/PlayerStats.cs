@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerWater), typeof(PlayerFood), typeof(PlayerWood))]
@@ -14,5 +13,17 @@ public class PlayerStats : MonoBehaviour
         PlayerFood = GetComponent<PlayerFood>();
         PlayerWater = GetComponent<PlayerWater>();
         PlayerWood = GetComponent<PlayerWood>();
+    }
+
+    private void Start()
+    {
+        GiveStats();
+    }
+
+    private void GiveStats()
+    {
+        PlayerFood.AddFood(40);
+        PlayerWater.AddWater(20);
+        PlayerWood.AddWood(1);
     }
 }

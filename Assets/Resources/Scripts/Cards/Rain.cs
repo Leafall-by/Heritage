@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-
 public class Rain : TimeCard
 {
     private Weather weather;
@@ -14,6 +9,7 @@ public class Rain : TimeCard
 
     public override void CancelAction()
     {
+        weather = FindObjectOfType<Weather>();
         weather.StopRain();
     }
 }

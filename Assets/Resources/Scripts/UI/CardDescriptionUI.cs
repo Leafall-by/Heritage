@@ -1,28 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CardDescriptionUI : MonoBehaviour
 {
-    [SerializeField] private Image image;
-    [SerializeField] private TextMeshProUGUI name;
-    [SerializeField] private TextMeshProUGUI fullDescription;
-    [SerializeField] private TextMeshProUGUI smallDescription;
+    [SerializeField] private GameObject SpawnPoint;
+    [SerializeField] private TextMeshProUGUI description;
+
+    private Card card;
 
     public void EnableDescriptionUI(Card card)
     {
-        image.sprite = card.BaseSprite;
-        fullDescription.text = card.fullDesc;
-        smallDescription.text = card.description.text;
-        name.text = card.name.text;
+        this.card = Instantiate(card, SpawnPoint.transform);
+
+        SettingRectTransform(this.card);
         
+        description = this.card.description;
+
         this.gameObject.SetActive(true);
+    }
+
+    private void SettingRectTransform(Card card)
+    {
+        RectTransform transform = this.card.transform as RectTransform;
+        transform.anchorMin = new Vector2(0.5f, 0.5f);
+        transform.anchorMax = new Vector2(0.5f, 0.5f);
+        transform.pivot = new Vector2(0.5f, 0.5f);
+        transform.sizeDelta = new Vector2(387, 382);
+        card.transform.localScale = new Vector3(1.7f, 1.7f, 1f);
     }
 
     public void CloseUI()
     {
+        Destroy(card.gameObject);
         this.gameObject.SetActive(false);
     }
 }

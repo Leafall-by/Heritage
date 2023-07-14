@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Death : MonoBehaviour
@@ -17,7 +14,7 @@ public class Death : MonoBehaviour
 
     private void TryDie()
     {
-        if (playerStats.PlayerWater.water < 0 || playerStats.PlayerFood.Food < 0 || playerStats.PlayerWood.wood < 0)
+        if (playerStats.PlayerWater.Water < 0 || playerStats.PlayerFood.Food < 0 || playerStats.PlayerWood.Wood < 0)
         {
             Die();
         }

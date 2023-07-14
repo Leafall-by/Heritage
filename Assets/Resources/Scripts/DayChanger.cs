@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Resources.Scripts.Animation;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -22,14 +17,13 @@ public class DayChanger : MonoBehaviour
     
     //TODO: Вынести в отдельный класс
     [SerializeField] private ChangeDayAnimation dayAnimation;
-    [SerializeField] private TextMeshProUGUI dayGUI;
+    [SerializeField] private DayData dayGUI;
     [SerializeField] private GameObject _spawnPoint;
 
     public UnityEvent DayChanged;
     private void Start()
     {
         cartSpawner = GetComponent<CartSpawner>();
-        cartSpawner.Init();
     }
 
     public void DeleteCart()
@@ -46,9 +40,8 @@ public class DayChanger : MonoBehaviour
     {
         day++;
         gardenController.Grow();
-        dayGUI.text = $"День: {day}";
         dayAnimation.ChangeDay();
-        
+        dayGUI.day = day;
         DayChanged?.Invoke();
     }
     

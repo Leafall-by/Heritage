@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -38,6 +35,7 @@ public class Weather : MonoBehaviour
         sky.color = Color.white;
         SetColorOnElements(Color.white);
         rain.Stop();
+        Debug.Log("11123123");
     }
 
     private void SetColorOnElements(Color color)
