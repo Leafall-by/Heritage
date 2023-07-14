@@ -1,5 +1,6 @@
 public abstract class TimeCard : Card
 {
+    public int cardId;
     public int dayDuration;
 
     public void DecreaseDuration()

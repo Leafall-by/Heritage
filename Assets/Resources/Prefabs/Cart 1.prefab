@@ -146,7 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405e1fa574fe2b440994c0aaea20bb31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 6679373287354429881, guid: 0faea91c66d721340891fce04bf407a7, type: 3}
-  - {fileID: 4627916965662213241, guid: 53cec902a28a8124da9e76dfb713d9a4, type: 3}
-  - {fileID: 1186385873484030532, guid: 844153bb8a86412428e3247a49d4a5a2, type: 3}
+  items: []

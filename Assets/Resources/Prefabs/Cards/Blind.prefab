@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2765f2f38c6ac0e49a40ac39417e0f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropChance: 1
+  dropChance: 4214
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
   BaseSprite: {fileID: 21300000, guid: 61aea76c5788b8543918db929ef1305f, type: 3}
   name: {fileID: 5966453279747461123}
@@ -72,6 +72,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   animator: {fileID: 0}
+  cardId: 1
   dayDuration: 2
 --- !u!114 &2258735092503885795
 MonoBehaviour:

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,16 +9,16 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private Image[] images;
     [SerializeField] private Button[] buttons;
 
-    private void ShowShop(Item[] items)
+    private void ShowShop(List<Item> items)
     {
         gameObject.SetActive(true);
     }
 
-    public void SetItemsUI(Item[] items, float discount)
+    public void SetItemsUI(List<Item> items, float discount)
     {
         ShowButtons();
         
-        for (int i = 0; i < items.Length; i++)
+        for (int i = 0; i < items.Count; i++)
         {
             if (items[i] == null)
             {

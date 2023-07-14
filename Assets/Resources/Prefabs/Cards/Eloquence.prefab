@@ -72,6 +72,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   animator: {fileID: 0}
+  cardId: 2
   dayDuration: 2
   discount: 50
 --- !u!114 &5013089547961661483

@@ -35,6 +35,18 @@ public class CardUI : MonoBehaviour
         card.OnClick.AddListener(OpenDescriptionUI);
     }
 
+    public void AddCardWithDifferentDuration(TimeCard cardPrefab, int duration)
+    {
+        TimeCard card = Instantiate(cardPrefab, content.transform);
+        card.dayDuration = duration;
+        cards.Add(card);
+        card.Init();
+        card.Use();
+        CardAdded?.Invoke(card);
+        
+        card.OnClick.AddListener(OpenDescriptionUI);
+    }
+
     private void DecreaseDay()
     {
         List<TimeCard> cardForDelete = new List<TimeCard>();

@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1960abe5f518c479c852e9ce9c5266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 3
   name: 
   image: {fileID: 21300000, guid: ec12530d4d80da144918ddcd9ccdccbb, type: 3}
   price: 9

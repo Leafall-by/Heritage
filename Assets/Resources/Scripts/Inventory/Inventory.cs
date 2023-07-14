@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
 
-public class Inventory
+public class Inventory : MonoBehaviour
 {
     private int maxTools = 3;
     private int maxItems = 6;
@@ -14,8 +17,12 @@ public class Inventory
         tools = new List<Tool>();
     }
     
-    public void AddItem(Item item)
+    public void AddItem(Item itemPrefab)
     {
+        Debug.Log("fdsfs");
+        Item item = Instantiate(itemPrefab);
+        item.gameObject.SetActive(false);
+        
         if (item is Tool tool && tools.Count < maxTools)
         {
             tools.Add(tool);
@@ -40,6 +47,7 @@ public class Inventory
         if (item is Tool tool && tools.Count < maxTools)
         {
             tools.Remove(tool);
+            Destroy(item.gameObject);
             return;
         }
 
@@ -55,6 +63,8 @@ public class Inventory
                 }
             }
         }
+        
+        Destroy(item.gameObject);
     }
     
     private ItemState FindItemState(Item item)

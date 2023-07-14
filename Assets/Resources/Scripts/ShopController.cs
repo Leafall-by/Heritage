@@ -1,10 +1,11 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ShopController : MonoBehaviour
 {
     [SerializeField] private Player player;
-    private Item[] items;
+    private List<Item> items;
     [SerializeField] private ShopUI shopUI;
 
     private float discount;
@@ -24,12 +25,12 @@ public class ShopController : MonoBehaviour
         }
     }
 
-    private void ShowShop(Item[] items)
+    private void ShowShop(List<Item> items)
     {
         shopUI.SetItemsUI(items, Discount);
     }
     
-    public void SetItems(Item[] items)
+    public void SetItems(List<Item> items)
     {
         this.items = items;
 
@@ -47,7 +48,7 @@ public class ShopController : MonoBehaviour
             Debug.Log(ex.Message);
             return;
         }
-        
+
         player.Inventory.AddItem(items[index]);
         items[index] = null;
         

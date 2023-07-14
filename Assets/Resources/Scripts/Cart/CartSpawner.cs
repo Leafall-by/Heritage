@@ -14,7 +14,12 @@ public class CartSpawner : MonoBehaviour
         if (randomizer.IsSpawn())
         {
             Cart cart = Instantiate(prefabCart, _spawnPoint.transform);
-            cart.SetItems(randomizer.RandomizeItems());
+            Item[] items = randomizer.RandomizeItems();
+
+            foreach (var itemPrefab in items)
+            {
+                cart.AddItem(itemPrefab);
+            }
             return cart;
         }
         else return null; //TODO Ошибку, если телега не приехала

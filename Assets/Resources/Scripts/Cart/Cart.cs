@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,19 +7,27 @@ public class Cart : MonoBehaviour
 {
     private const int COUNT_ITEMS_FOR_SELL = 3;
     
-    public Item[] items = new Item[COUNT_ITEMS_FOR_SELL];
+    public List<Item> items = new List<Item>();
 
     private ShopController controller;
 
-    public void SetItems(Item[] items)
+    public void AddItem(Item item)
     {
-        this.items = items;
+        Debug.Log(items.Count);
+        
+        if (items.Count == COUNT_ITEMS_FOR_SELL)
+        {
+            throw new Exception();
+        }
+        
+        items.Add(item);
         
         TrySetRainColor();
     }
 
     public void ShowShop()
     {
+        Debug.Log(items[0]);
         controller.SetItems(items);
     }
 

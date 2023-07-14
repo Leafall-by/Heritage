@@ -384,6 +384,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   animator: {fileID: 0}
+  cardId: 4
   dayDuration: 2
 --- !u!114 &3791361217377056094
 MonoBehaviour:

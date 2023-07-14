@@ -71,6 +71,8 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+  animator: {fileID: 0}
+  cardId: 0
   dayDuration: 2
 --- !u!114 &5779466254220803390
 MonoBehaviour:

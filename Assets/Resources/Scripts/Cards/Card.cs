@@ -14,9 +14,9 @@ public abstract class Card : MonoBehaviour, IPointerClickHandler
     public TextMeshProUGUI name;
     public TextMeshProUGUI description;
 
-    public UnityEvent<Card> OnClick;
+    [HideInInspector] public UnityEvent<Card> OnClick;
     
-    public Animator animator;
+    [HideInInspector] public Animator animator;
 
     public void Init()
     {

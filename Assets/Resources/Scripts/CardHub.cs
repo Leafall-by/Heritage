@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CardHub : MonoBehaviour
 {
-    public CardUI cardUI;
+    public List<TimeCard> timeCards;
 }

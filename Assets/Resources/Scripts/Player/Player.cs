@@ -16,6 +16,6 @@ public class Player : MonoBehaviour
 
         Wallet = GetComponent<Wallet>();
 
-        Inventory = new Inventory();
+        Inventory = GetComponent<Inventory>();
     }
 }

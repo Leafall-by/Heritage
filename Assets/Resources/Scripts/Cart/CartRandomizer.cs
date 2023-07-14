@@ -25,6 +25,7 @@ public class CartRandomizer
         for (int i = 0; i < itemsForSell.Length; i++)
         {
             itemsForSell[i] = items[Random.Range(0, items.Length)];
+            
         }
         
         return itemsForSell;
