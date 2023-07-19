@@ -29,6 +29,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ru
     - Preload
+  - m_GUID: a1abe0032bdde554e8128e1ced4192fc
+    m_Address: CardDesc_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    - Preload
+  - m_GUID: baa94df4918296e4481ed5e536e40842
+    m_Address: CardFullDesc_ru
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    - Preload
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 29a7618e3dd116c46b57acb6a1b97297, type: 2}
   m_SchemaSet:

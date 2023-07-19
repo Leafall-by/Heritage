@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public abstract class Card : MonoBehaviour, IPointerClickHandler
 {
+    public string fullDescKey;
+    
     public int dropChance;
 
     public Sprite BlackCardSprite;

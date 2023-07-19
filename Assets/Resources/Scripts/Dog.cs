@@ -5,9 +5,14 @@ public class Dog : MonoBehaviour
 {
     public bool IsExist { get; private set; }
 
+    [SerializeField] private GameObject dog;
+    [SerializeField] private GameObject shadow;
+
     public void Spawn()
     {
-        GetComponent<Image>().enabled = true;
         IsExist = true;
+        
+        dog.SetActive(true);
+        shadow.SetActive(true);
     }
 }

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CardFullDesc_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 9d4790a598964724c836747600173d59, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6515314688
+    m_Localized: Alcohol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126686318592
+    m_Localized: Anonim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 179253530624
+    m_Localized: Arrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 230210129920
+    m_Localized: Bandits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 277261832192
+    m_Localized: Blind
+    m_Metadata:
+      m_Items: []
+  - m_Id: 336636399616
+    m_Localized: Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387030962176
+    m_Localized: Eloquence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 458262827008
+    m_Localized: Lighting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 505260003328
+    m_Localized: Message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 553096040448
+    m_Localized: Puddle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 614995578880
+    m_Localized: Rain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 661539770368
+    m_Localized: Rat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708117516288
+    m_Localized: Robbery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 765344600064
+    m_Localized: Treasure
+    m_Metadata:
+      m_Items: []
+  - m_Id: 835272036352
+    m_Localized: War
+    m_Metadata:
+      m_Items: []
+  - m_Id: 872563593216
+    m_Localized: Wolf
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

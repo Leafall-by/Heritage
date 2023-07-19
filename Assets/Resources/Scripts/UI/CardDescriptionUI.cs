@@ -1,5 +1,7 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class CardDescriptionUI : MonoBehaviour
 {
@@ -13,8 +15,8 @@ public class CardDescriptionUI : MonoBehaviour
         this.card = Instantiate(card, SpawnPoint.transform);
 
         SettingRectTransform(this.card);
-        
-        description = this.card.description;
+
+        description.text = LocalizationSettings.StringDatabase.GetLocalizedString("CardFullDesc", card.fullDescKey);
 
         this.gameObject.SetActive(true);
     }

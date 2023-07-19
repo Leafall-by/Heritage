@@ -53,7 +53,7 @@ public class ItemSaver : ISaver
 
             foreach (var itemId in data.idItems)
             {
-                inventory.AddItem(itemHub.items.First(x => x.id == itemId));
+                inventory.AddItem(itemHub.FindItemByID(itemId));
             }
         }
         else

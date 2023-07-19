@@ -5,7 +5,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(CartSpawner))]
 public class DayChanger : MonoBehaviour
 {
-    private int day;
+    [HideInInspector] public int day { get; set; }
 
     private CartSpawner cartSpawner;
 
@@ -62,5 +62,4 @@ public class DayChanger : MonoBehaviour
         }
         cart.SetShopController(shopController);
     }
-
 }

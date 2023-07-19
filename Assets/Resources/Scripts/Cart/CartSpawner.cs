@@ -1,3 +1,4 @@
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 
 public class CartSpawner : MonoBehaviour
@@ -24,4 +25,16 @@ public class CartSpawner : MonoBehaviour
         }
         else return null; //TODO Ошибку, если телега не приехала
     }
+
+    public Cart Spawn(Item[] items)
+    {
+        Cart cart = Instantiate(prefabCart, _spawnPoint.transform);
+
+        foreach (var item in items)
+        {
+            cart.AddItem(item);
+        }
+
+        return cart;
+    } 
 }

@@ -35,6 +35,11 @@ public class Wallet : MonoBehaviour
         MoneyGameObjectIsRemoved?.Invoke(money);
     }
 
+    public int GetCountMoney()
+    {
+        return gold;
+    }
+
     public void RemoveAllMoney()
     {
         RemoveGold(this.gold);
