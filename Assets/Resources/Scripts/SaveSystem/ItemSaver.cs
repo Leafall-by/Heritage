@@ -19,18 +19,26 @@ public class ItemSaver : ISaver
     public void Save()
     {
         ItemData data = new ItemData();
-
-        foreach (var item in inventory.GetItems())
+        
+        foreach (var itemList in inventory.GetItems())
         {
-            for (int i = 0; i < item.count; i++)
+            foreach (var itemState in itemList)
             {
-                data.idItems.Add(item.item.id);
+                for (int i = 0; i < itemState.count; i++)
+                {
+                    data.idItems.Add(itemState.item.id);
+                }
             }
         }
 
-        foreach (var tool in inventory.GetTools())
+        data.maxPage = inventory.maxPages;
+        
+        foreach (var toolList in inventory.GetTools())
         {
-            data.idItems.Add(tool.id);
+            foreach (var tool in toolList)
+            {
+                data.idItems.Add(tool.id);
+            }
         }
         
         BinaryFormatter bf = new BinaryFormatter();
@@ -51,6 +59,11 @@ public class ItemSaver : ISaver
             ItemData data = (ItemData)bf.Deserialize(file);
             file.Close();
 
+            for (int i = 0; i < data.maxPage - 1; i++)
+            {
+                inventory.ExpandInventory();
+            }
+            
             foreach (var itemId in data.idItems)
             {
                 inventory.AddItem(itemHub.FindItemByID(itemId));

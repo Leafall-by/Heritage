@@ -93,4 +93,4 @@ MonoBehaviour:
   name: 
   image: {fileID: 21300000, guid: 58b9a077b3115c64589b862267a13f6b, type: 3}
   price: 11
-  endurance: 70
+  endurance: 10

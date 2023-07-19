@@ -9,6 +9,8 @@ public class ItemData
 {
     public List<int> idItems;
 
+    public int maxPage;
+
     public ItemData()
     {
         idItems = new List<int>();

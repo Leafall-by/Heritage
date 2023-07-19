@@ -32,28 +32,34 @@ public class SeedMenuController : MonoBehaviour
 
     private void RefreshCells()
     {
-        
         DeleteCellItems();
         SetCellItems();
     }
 
     private void SetCellItems()
     {
-        foreach (var item in player.Inventory.GetItems())
+        foreach (var itemStateList in player.Inventory.GetItems())
         {
-            if (item.item is Seed)
+            foreach (var item in itemStateList)
             {
-                Cell cell =  GetAvaiableCell();
-                cell.SetItem(item);
+                if (item.item is Seed)
+                {
+                    Cell cell =  GetAvaiableCell();
+                    cell.SetItem(item);
+                }    
             }
+            
         }
-
-        foreach (var tool in player.Inventory.GetTools())
+        
+        foreach (var toolList in player.Inventory.GetTools())
         {
-            if (tool is Hoe)
+            foreach (var tool in toolList)
             {
-                toolCell.SetItem(tool);
-                break;
+                if (tool is Hoe)
+                {
+                    toolCell.SetItem(tool);
+                    break;
+                }
             }
         }
     }
@@ -86,10 +92,16 @@ public class SeedMenuController : MonoBehaviour
         if (toolCell.item != null)
         {
             toolCell.item.endurance -= 25;
-            item.Use();
+            if (toolCell.item.endurance <= 0)
+            {
+                player.Inventory.RemoveItem(toolCell.item);
+            }
         }
-        
-        
+        else
+        {
+            return;
+        }
+
         player.Inventory.RemoveItem(item);
         timeController.AddTime(60);
         RefreshCells();

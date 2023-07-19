@@ -37,6 +37,12 @@ public class CardUI : MonoBehaviour
 
     public void AddCardWithDifferentDuration(TimeCard cardPrefab, int duration)
     {
+        TimeCard sameCard = cards.FirstOrDefault(x => x.GetType() == cardPrefab.GetType());
+        if ( sameCard != null)
+        {
+            DeleteCard(sameCard);
+        }
+        
         TimeCard card = Instantiate(cardPrefab, content.transform);
         card.dayDuration = duration;
         cards.Add(card);
