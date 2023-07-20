@@ -59,7 +59,7 @@ public class ItemSaver : ISaver
             ItemData data = (ItemData)bf.Deserialize(file);
             file.Close();
 
-            for (int i = 0; i < data.maxPage - 1; i++)
+            for (int i = 0; i < data.maxPage; i++)
             {
                 inventory.ExpandInventory();
             }

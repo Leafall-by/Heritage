@@ -912,6 +912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3174968498979554982, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 4031633674240
+      objectReference: {fileID: 0}
     - target: {fileID: 4366649652652540212, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_RootOrder
       value: 5

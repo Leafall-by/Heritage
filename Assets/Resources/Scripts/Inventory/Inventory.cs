@@ -21,6 +21,33 @@ public class Inventory : MonoBehaviour
         
         ExpandInventory();
     }
+
+    public Item FindItemByType(Type typeItem)
+    {
+        foreach (var itemStateList in items)
+        {
+            foreach (var itemState in itemStateList)
+            {
+                if (itemState.item.GetType() == typeItem)
+                {
+                    return itemState.item;
+                }
+            }
+        }
+
+        foreach (var toolList in tools)
+        {
+            foreach (var tool in toolList)
+            {
+                if (tool.GetType() == typeItem)
+                {
+                    return tool;
+                }
+            }
+        }
+
+        return null; //TODO Кидать ошибку
+    }
     
     public void AddItem(Item itemPrefab)
     {

@@ -40,7 +40,7 @@ public class CartSaver : ISaver
                 if (item == null)
                 {
                     data.idItems.Add(-1);
-                    break;
+                    continue;
                 }
                 data.idItems.Add(item.id);
             }
@@ -73,7 +73,7 @@ public class CartSaver : ISaver
                     if (id == -1)
                     {
                         items.Add(null);
-                        break;
+                        continue;
                     }
                     items.Add(itemHub.FindItemByID(id));
                 }
