@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d8abf5a24a87849a06cd7c9c0d9bd0, type: 3}
+  m_Name: Dog 2
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 57cf067c167006c468e89aef931832cf, type: 3}
+  Health: 12
+  spells:
+  - {fileID: 11400000, guid: d6206f7ee0ce7c94ca364a638b3da05d, type: 2}

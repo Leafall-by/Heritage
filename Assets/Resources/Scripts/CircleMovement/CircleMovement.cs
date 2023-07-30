@@ -12,9 +12,13 @@ public class CircleMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private CircleCollider2D collider;
 
-    public UnityEvent<bool> OnClick;
+    [HideInInspector] public UnityEvent<bool> OnClick;
     
     private bool inZone;
+
+    private Coroutine axisCoroutine;
+    [SerializeField] private int mindelay;
+    [SerializeField] private int maxdelay;
     
     void Update()
     {
@@ -50,6 +54,22 @@ public class CircleMovement : MonoBehaviour
         transform.localPosition = vector;
         
         transform.rotation = Quaternion.Euler(0f, 0f, GetRotationZ());
+
+        axisCoroutine = StartCoroutine(ChangeAxisCoroutine());
+    }
+
+    private void OnDisable()
+    {
+        StopCoroutine(axisCoroutine);
+    }
+
+    private IEnumerator ChangeAxisCoroutine()
+    {
+        int delay = Random.Range(mindelay, maxdelay+1);
+
+        yield return new WaitForSeconds(delay);
+        axis *= -1;
+        axisCoroutine = StartCoroutine(ChangeAxisCoroutine());
     }
 
     public void SetInRedZone(bool isInZone)
