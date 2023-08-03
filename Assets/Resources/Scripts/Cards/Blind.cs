@@ -1,4 +1,4 @@
-public class Blind : TimeCard, IDependet
+public class Blind : TimeCard, IDependetForSpawn
 {
     private BlindController controller;
     

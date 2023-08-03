@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerFood : MonoBehaviour
 {
     public int Food { get; private set; }
-    private const int MAX_FOOD = 50;
+    public const int MAX_FOOD = 50;
 
     public event Action<int> FoodIsChanged;
 

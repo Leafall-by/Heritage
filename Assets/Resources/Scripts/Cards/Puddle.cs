@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Puddle : TimeCard, IDependet
+public class Puddle : TimeCard, IDependetForSpawn
 {
     [SerializeField] private int timeCoefficient;
     private TimeController controller;

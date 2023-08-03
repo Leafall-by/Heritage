@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullDescKey: CardFullDesc_Wolf
-  dropChance: 99
+  dropChance: 422
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
   BaseSprite: {fileID: 21300000, guid: e0b041a9401c2fe41a538bfb3ed7c780, type: 3}
   name: {fileID: 6803051694646167752}
@@ -73,6 +73,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   animator: {fileID: 0}
+  KnifeEnduranceForRemove: 50
 --- !u!114 &1440291259408838440
 MonoBehaviour:
   m_ObjectHideFlags: 0

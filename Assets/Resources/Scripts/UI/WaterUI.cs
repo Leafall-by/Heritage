@@ -6,17 +6,16 @@ public class WaterUI : MonoBehaviour
 {
     [SerializeField] private PlayerStats stats;
     [SerializeField] private TextMeshProUGUI textCount;
-    private Slider slider;
+    [SerializeField] private Image image;
 
     private void Start()
     {
-        slider = GetComponent<Slider>();
         stats.PlayerWater.WaterIsChanged += ChangeFoodSlider;
     }
 
     private void ChangeFoodSlider(int water)
     {
-        slider.value = water;
+        image.fillAmount = (float)water / PlayerWater.MAX_WATER;
         textCount.text = water.ToString();
     }
 }

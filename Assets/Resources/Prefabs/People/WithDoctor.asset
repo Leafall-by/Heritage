@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81949a232dd54c45b2af43ed7a07849, type: 3}
   m_Name: WithDoctor
   m_EditorClassIdentifier: 
-  IsWas: 0
-  inputDialog: {fileID: 4900000, guid: cf96c6a9dddd2b04385ac3034c6c2ca4, type: 3}
+  dialogIndex: 0
+  dayDialoges:
+  - {fileID: 4900000, guid: 79a58b650903ac94b85bf6d1090c6c29, type: 3}

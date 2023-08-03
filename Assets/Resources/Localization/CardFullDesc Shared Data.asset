@@ -79,6 +79,10 @@ MonoBehaviour:
     m_Key: CardFullDesc_Wolf
     m_Metadata:
       m_Items: []
+  - m_Id: 5475671582691328
+    m_Key: CardFullDesc_Plague
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

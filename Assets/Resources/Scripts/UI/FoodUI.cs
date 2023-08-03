@@ -6,17 +6,17 @@ public class FoodUI : MonoBehaviour
 {
     [SerializeField] private PlayerStats stats;
     [SerializeField] private TextMeshProUGUI textCount;
-    private Slider slider;
+    private Image image;
 
     private void Start()
     {
-        slider = GetComponent<Slider>();
+        image = GetComponentInChildren<Image>();
         stats.PlayerFood.FoodIsChanged += ChangeFoodSlider;
     }
 
     private void ChangeFoodSlider(int food)
     {
-        slider.value = food;
+        image.fillAmount = (float)food / PlayerFood.MAX_FOOD;
         textCount.text = food.ToString();
     }
 }

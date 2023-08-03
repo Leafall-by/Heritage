@@ -35,6 +35,16 @@ public class CardGiverUI : MonoBehaviour
         currentCardIndex++;
         SubscribeCard(card);
 
+        if (card.prefabCard is IDependetForUse dependet)
+        {
+            if (dependet.IsAlternative())
+            {
+                dependet.UseAlternative();
+                card.ChangeDescWithKey(dependet.GetAlternativeDescKey());
+                return;
+            }
+        }
+
         if (card.prefabCard is TimeCard tc)
         {
             cardUI.AddCard(tc);  

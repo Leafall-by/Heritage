@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerWater : MonoBehaviour
 {
     public int Water { get; private set; }
-    private const int MAX_WATER = 50;
+    public const int MAX_WATER = 50;
     
     public Action<int> WaterIsChanged;
     

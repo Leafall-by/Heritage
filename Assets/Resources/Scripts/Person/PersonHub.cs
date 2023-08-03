@@ -9,7 +9,7 @@ public class PersonHub : MonoBehaviour
     {
         foreach (var person in people)
         {
-            if (person.IsWas == false)
+            if (person.IsAvaialable() == true)
             {
                 return person;
             }

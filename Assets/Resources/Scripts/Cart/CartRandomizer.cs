@@ -1,10 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class CartRandomizer
 {
     private const int PROCENT_CHANCE = 75;
 
     private Item[] items;
+
+    private const int MAX_ITEMS = 3;
+
+    private List<Item> itemsForSell;
 
     public CartRandomizer(Item[] items)
     {
@@ -20,14 +26,27 @@ public class CartRandomizer
 
     public Item[] RandomizeItems()
     {
-        Item[] itemsForSell = new Item[3];
+        itemsForSell = new List<Item>();
 
-        for (int i = 0; i < itemsForSell.Length; i++)
+        Debug.Log("1");
+
+        for (int i = 0; i < MAX_ITEMS; i++)
         {
-            itemsForSell[i] = items[Random.Range(0, items.Length)];
-            
+            itemsForSell.Add(RandomizeItem());
         }
-        
-        return itemsForSell;
+
+        return itemsForSell.ToArray();
+    }
+
+    public Item RandomizeItem()
+    {
+        Item item = items[Random.Range(0, items.Length)];
+
+        if (itemsForSell.Contains(item))
+        {
+            return RandomizeItem();
+        }
+
+        return item;
     }
 }

@@ -82,6 +82,10 @@ MonoBehaviour:
     m_Localized: Wolf
     m_Metadata:
       m_Items: []
+  - m_Id: 5475671582691328
+    m_Localized: Plague
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

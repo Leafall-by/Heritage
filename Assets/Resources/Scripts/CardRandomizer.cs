@@ -34,7 +34,7 @@ public class CardRandomizer
         int sum = 0;
         foreach (var card in allCards)
         {
-            if ((card.prefabCard is IDependet dependet && !dependet.IsCan()) || IsContains(card))
+            if ((card.prefabCard is IDependetForSpawn dependet && !dependet.IsCan()) || IsContains(card))
             {
                 continue;
             }

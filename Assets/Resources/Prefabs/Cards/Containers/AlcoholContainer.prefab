@@ -807,7 +807,7 @@ PrefabInstance:
     - target: {fileID: 1721568002788996264, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 810b848eafb90f440b37f94d9347eb75, type: 3}
+      objectReference: {fileID: 21300000, guid: 09568db3f44e4bd4a96ef11f42db3aac, type: 3}
     - target: {fileID: 1721568002788996266, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -911,6 +911,10 @@ PrefabInstance:
     - target: {fileID: 1721568003017547043, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_Name
       value: Image (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1721568003017547043, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3174968498979554982, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId

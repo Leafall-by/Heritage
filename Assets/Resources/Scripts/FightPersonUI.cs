@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -23,8 +24,13 @@ public class FightPersonUI : MonoBehaviour, IPointerClickHandler
 
     public void SetBorder()
     {
-        material.material.SetColor("_Color", Color.yellow);
+        material.material.SetColor("_Color", Color.red);
         image.material = material.material;
+    }
+
+    public void DestroyBorder()
+    {
+        image.material = null;
     }
 
     public void OnPointerClick(PointerEventData eventData)

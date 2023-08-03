@@ -79,6 +79,10 @@ MonoBehaviour:
     m_Key: Card_Dog
     m_Metadata:
       m_Items: []
+  - m_Id: 9810748387086336
+    m_Key: Card_Plague
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

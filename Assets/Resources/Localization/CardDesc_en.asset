@@ -82,6 +82,14 @@ MonoBehaviour:
     m_Localized: WolfDesc
     m_Metadata:
       m_Items: []
+  - m_Id: 4998190400524288
+    m_Localized: You kill wolf with knife
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5488467213012992
+    m_Localized: PlagueDesc
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerWood : MonoBehaviour
 {
     public int Wood { get; set; }
-    private const int MAX_WOOD = 50;
+    public const int MAX_WOOD = 50;
     
     public Action<int> WoodIsChanged;
     

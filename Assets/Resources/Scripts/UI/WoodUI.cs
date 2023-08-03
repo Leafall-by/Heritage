@@ -6,17 +6,17 @@ public class WoodUI : MonoBehaviour
 {
     [SerializeField] private PlayerStats stats;
     [SerializeField] private TextMeshProUGUI textCount;
-    private Slider slider;
+    private Image image;
     
     private void Start()
     {
-        slider = GetComponent<Slider>();
+        image = GetComponentInChildren<Image>();
         stats.PlayerWood.WoodIsChanged += ChangeFoodSlider;
     }
 
     private void ChangeFoodSlider(int wood)
-    { 
-        slider.value = wood;
+    {
+        image.fillAmount = (float)wood / PlayerWood.MAX_WOOD;
         textCount.text = wood.ToString();
     }
 }

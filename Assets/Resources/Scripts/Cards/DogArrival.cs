@@ -1,4 +1,4 @@
-public class DogArrival : Card, IDependet
+public class DogArrival : Card, IDependetForSpawn
 {
     public override void Use()
     {

@@ -15,13 +15,11 @@ public class FightManager : MonoBehaviour
 
     private FightPerson selectedHero;
 
+    private bool IsAwaitTarget;
+
     private void Start()
     {
         foreach (var person in teamUI)
-        {
-            person.OnClick.AddListener(TryChangeHero);
-        }
-        foreach (var person in enemyUI)
         {
             person.OnClick.AddListener(TryChangeHero);
         }

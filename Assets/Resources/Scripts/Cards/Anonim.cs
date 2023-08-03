@@ -1,4 +1,4 @@
-public class Anonim : Card, IDependet
+public class Anonim : Card, IDependetForSpawn
 {
     public override void Use()
     {
@@ -10,8 +10,8 @@ public class Anonim : Card, IDependet
         }
         
         DialogueController controller = FindObjectOfType<DialogueController>();
-        controller.EnterDialogueMode(person.GetInputDialogue());
-        person.IsWas = true;
+
+        controller.EnterDialogueMode(person.GetCurrentDialogue());
     }
 
     public bool IsCan()

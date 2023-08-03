@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Lighting : Card, IDependet
+public class Lighting : Card, IDependetForSpawn
 {
     [SerializeField] private int woodForMinus;
     [SerializeField] private int waterForMinus;
