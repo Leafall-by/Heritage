@@ -8,7 +8,12 @@ public class PlagueController : MonoBehaviour
     [SerializeField] private DialogueController dialogueController;
     [SerializeField] private Person witchDoctor;
 
+    private const int chanceToGetPlague = 5;
     public bool PlagueIsStart { get; private set; }
+
+    private void Start()
+    {
+    }
 
     public void StartPlague()
     {
@@ -18,6 +23,11 @@ public class PlagueController : MonoBehaviour
     }
 
     public void StopPlague()
+    {
+
+    }
+
+    private void TryGetPlague()
     {
 
     }
