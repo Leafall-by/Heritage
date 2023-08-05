@@ -19,87 +19,93 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 16099299328
-    m_Localized: RatDesc
+    m_Localized: Furry little creature. Runs around the corners, afraid.
     m_Metadata:
       m_Items: []
   - m_Id: 441233952768
-    m_Localized: AnonimDesc
+    m_Localized: "\rSomeone came here, in such a wilderness? Enemy or friend?"
     m_Metadata:
       m_Items: []
   - m_Id: 626097901568
-    m_Localized: DogDesc
+    m_Localized: How good, how nice, can I keep it for myself? And I'm alone...
     m_Metadata:
       m_Items: []
   - m_Id: 1761588269056
-    m_Localized: AlcoholDesc
+    m_Localized: Depression, everyone left me... Not everyone, beer hasn't left me
+      yet.
     m_Metadata:
       m_Items: []
   - m_Id: 1985635405824
-    m_Localized: ArrowDesc
+    m_Localized: Damn it! How did I manage to land myself on an arrow.
     m_Metadata:
       m_Items: []
   - m_Id: 2221778915328
-    m_Localized: BanditsDesc
+    m_Localized: Like vultures swoop in, take apart indiscriminately. Well, why me?
     m_Metadata:
       m_Items: []
   - m_Id: 2495893458944
-    m_Localized: BlindDesc
+    m_Localized: God, I can't see anything. What's going on around?
     m_Metadata:
       m_Items: []
   - m_Id: 2745966252032
-    m_Localized: EloquenceDesc
+    m_Localized: "\rI've been training all night to get anyone to talk tonight!"
     m_Metadata:
       m_Items: []
   - m_Id: 2940829421568
-    m_Localized: LightingDesc
+    m_Localized: "\rLight... boom! Lightning! And of course in my house..."
     m_Metadata:
       m_Items: []
   - m_Id: 3182576521216
-    m_Localized: MessageDesc
+    m_Localized: "The letter... I wonder how it got here.\r"
     m_Metadata:
       m_Items: []
   - m_Id: 3394292404224
-    m_Localized: PuddleDesc
+    m_Localized: "\u042F \u043F\u0440\u043E\u043C\u043E\u043A... \u0415\u0441\u043B\u0438
+      \u0437\u0430\u0431\u043E\u043B\u0435\u044E, \u0431\u0443\u0434\u0435\u0442
+      \u043F\u043B\u043E\u0445\u043E."
     m_Metadata:
       m_Items: []
   - m_Id: 3604020187136
-    m_Localized: RainDesc
+    m_Localized: It started to rain... wonderful. The garden will grow faster.
     m_Metadata:
       m_Items: []
   - m_Id: 3825496215552
-    m_Localized: RobberyDesc
+    m_Localized: What, where's my precious vase? She wasn't there, so they stole
+      it.
     m_Metadata:
       m_Items: []
   - m_Id: 4031633674240
-    m_Localized: TreasureDesc
+    m_Localized: "GOLD! And there is no pair of coins!\r"
     m_Metadata:
       m_Items: []
   - m_Id: 4302283722752
-    m_Localized: WarDesc
+    m_Localized: War?! And with which state, what if I'm on the border
     m_Metadata:
       m_Items: []
   - m_Id: 4488175276032
-    m_Localized: WolfDesc
+    m_Localized: Damn dog. Calm down, take a bite.
     m_Metadata:
       m_Items: []
   - m_Id: 4998190400524288
-    m_Localized: You kill wolf with knife
+    m_Localized: "\rI have a knife! The end of you wolf."
     m_Metadata:
       m_Items: []
   - m_Id: 5488467213012992
-    m_Localized: PlagueDesc
+    m_Localized: Oh...
     m_Metadata:
       m_Items: []
   - m_Id: 5907244731846656
-    m_Localized: CartCautionDesc
+    m_Localized: "Now there\u2019s no time for jokes, I won\u2019t last long without
+      a cart."
     m_Metadata:
       m_Items: []
   - m_Id: 6072937561444352
-    m_Localized: GardenRobberyDesc
+    m_Localized: Where is my harvest? Did I remove it?
     m_Metadata:
       m_Items: []
   - m_Id: 6098510161629184
-    m_Localized: RobberyBySoldiersDesc
+    m_Localized: Of course, I'll give you a couple of my things, I don't survive
+      here.
     m_Metadata:
       m_Items: []
   references:

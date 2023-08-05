@@ -19,83 +19,113 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 6515314688
-    m_Localized: Alcohol
+    m_Localized: Sometimes everyone needs a drink, well, I wanted to drink a couple
+      of drops today. Well, yes, I ended up on the other side of the world, so what?
     m_Metadata:
       m_Items: []
   - m_Id: 126686318592
-    m_Localized: Anonim
+    m_Localized: Are you also going to some unknown poor peasant on the edge of the
+      earth? This guy is exactly what a good fellow, I hope I say goodbye to him
+      today.
     m_Metadata:
       m_Items: []
   - m_Id: 179253530624
-    m_Localized: Arrow
+    m_Localized: An arrow that somehow ended up in my knee. Why can't I remember
+      this detail. How can I start gardening in this condition!
     m_Metadata:
       m_Items: []
   - m_Id: 230210129920
-    m_Localized: Bandits
+    m_Localized: They are vile, disgusting. They have nothing human, they are not
+      people, they are already demons, but what I do to them, I will have to give
+      what they demand.
     m_Metadata:
       m_Items: []
   - m_Id: 277261832192
-    m_Localized: Blind
+    m_Localized: Sometimes it can get into the eyes, something that cannot even be
+      imagined that could fit. Mote, dagger, but I just have a problem with my eyes.
     m_Metadata:
       m_Items: []
   - m_Id: 336636399616
-    m_Localized: Dog
+    m_Localized: "\rHow cute is he. I wonder where he comes from, the main thing
+      is that he can help me with some of my daily activities."
     m_Metadata:
       m_Items: []
   - m_Id: 387030962176
-    m_Localized: Eloquence
+    m_Localized: How much did you think about your speech? Do you choose words effectively
+      in the current situation, are they acceptable? Before going to bed, I always
+      train my larynx. I am sure today I will give a sharper result in the store.
     m_Metadata:
       m_Items: []
   - m_Id: 458262827008
-    m_Localized: Lighting
+    m_Localized: "\rA bright flash followed by an equally bright explosion. Lightning
+      could break my house, but not my spirit, I will put out the fire and patch
+      up the hole."
     m_Metadata:
       m_Items: []
   - m_Id: 505260003328
-    m_Localized: Message
+    m_Localized: How nice that someone wrote to me. I hope it's not the IRS.
     m_Metadata:
       m_Items: []
   - m_Id: 553096040448
-    m_Localized: Puddle
+    m_Localized: "\rThere is land, it is uneven. There is water, it flows. Surprisingly,
+      if you mix them. Some of them will turn out to be mud, but the earth is not
+      able to absorb water to the end and this appears ..."
     m_Metadata:
       m_Items: []
   - m_Id: 614995578880
-    m_Localized: Rain
+    m_Localized: To be honest, I like rain more than sunny weather. The sun mercilessly
+      bakes constantly, and the rain indulgently hits with drops of water. And it's
+      more atmospheric. Although it has some side effects...
     m_Metadata:
       m_Items: []
   - m_Id: 661539770368
-    m_Localized: Rat
+    m_Localized: Little or not. There is only one essence, a freeloader rodent, unable
+      to help in any way, only eats and runs away from me, how annoying.
     m_Metadata:
       m_Items: []
   - m_Id: 708117516288
-    m_Localized: Robbery
+    m_Localized: Sometimes people come into our lives whom we did not call, that's
+      okay. But if they still take our things, it's terrible.
     m_Metadata:
       m_Items: []
   - m_Id: 765344600064
-    m_Localized: Treasure
+    m_Localized: "\rPeople, especially the rich, throw away their money, they have
+      so much metal in their pockets that they sometimes fall out of their pockets."
     m_Metadata:
       m_Items: []
   - m_Id: 835272036352
-    m_Localized: War
+    m_Localized: War... The rulers are fighting for a piece of land that will give
+      them an advantage in the next battle or trade, this is an inevitable event,
+      because a person always wants more and more.
     m_Metadata:
       m_Items: []
   - m_Id: 872563593216
-    m_Localized: Wolf
+    m_Localized: A dangerous beast, without a weapon, I have to give up all my food
+      so that I don't get eaten and die.
     m_Metadata:
       m_Items: []
   - m_Id: 5475671582691328
-    m_Localized: Plague
+    m_Localized: The plague is the danger. There is nothing worse than the plague.
+      The medicine is insanely expensive, and at the slightest delay they will get
+      rid of you, goosebumps.
     m_Metadata:
       m_Items: []
   - m_Id: 5894512053833728
-    m_Localized: CartCaution
+    m_Localized: Now the war... The wagon can't drive as efficiently as before, now
+      every 2 is able to rob it.
     m_Metadata:
       m_Items: []
   - m_Id: 6060160256036864
-    m_Localized: GardenRobbery
+    m_Localized: Because of the war, the warriors have nothing to eat and they decided
+      that the hunger of one person cannot be compared with the defeat in the following
+      battles, it sounds logical, but why is it so offensive to me.
     m_Metadata:
       m_Items: []
   - m_Id: 6085660336705536
-    m_Localized: RobberyBySoldiers
+    m_Localized: 'Sometimes soldiers need something that can help win the next battle,
+      at least I want to believe so.
+
+'
     m_Metadata:
       m_Items: []
   references:
