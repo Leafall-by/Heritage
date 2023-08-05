@@ -418,9 +418,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullDescKey: CardFullDesc_War
-  dropChance: 5
+  dropChance: 1
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
-  BaseSprite: {fileID: 21300000, guid: 8ef5a987ff523b0428fd0a0035536d2f, type: 3}
+  BaseSprite: {fileID: 21300000, guid: b9eaa660abfc9e149aadb20d7993aa38, type: 3}
   name: {fileID: 3440933084296127145}
   description: {fileID: 3867126636872275236}
   OnClick:
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8ef5a987ff523b0428fd0a0035536d2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9eaa660abfc9e149aadb20d7993aa38, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

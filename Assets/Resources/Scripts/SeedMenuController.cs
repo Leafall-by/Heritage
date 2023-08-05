@@ -103,6 +103,7 @@ public class SeedMenuController : MonoBehaviour
         }
 
         player.Inventory.RemoveItem(item);
+        item.Use();
         timeController.AddTime(60);
         RefreshCells();
     }

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
@@ -8,11 +9,16 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Cell[] cells;
     [SerializeField] private ToolCell[] toolCells;
 
+    [Header("Отображение страниц")]
+    [SerializeField] private TextMeshProUGUI currentPageUI;
+    [SerializeField] private TextMeshProUGUI maxPageUI;
+
     private int currentPage;
 
     public void ShowInventory()
     {
         SetItems(player.Inventory.GetItems()[0].ToArray(), player.Inventory.GetTools()[0].ToArray());
+        maxPageUI.text = (player.Inventory.maxPages + 1).ToString();
     }
 
     private void SetItems(ItemState[] items, Tool[] tools)
@@ -38,6 +44,7 @@ public class InventoryUI : MonoBehaviour
         ClearInventory();
 
         currentPage += direction;
+        currentPageUI.text = (currentPage + 1).ToString();
 
         SetItems(player.Inventory.GetItems()[currentPage].ToArray(), player.Inventory.GetTools()[currentPage].ToArray());
     }

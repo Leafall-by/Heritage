@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class GardenCell : MonoBehaviour, IPointerClickHandler
 {
     public Action<Vegetable> OnCollect;
+    public Action<Vegetable> OnDestroy;
     
     private Vegetable vegetable;
 
@@ -19,7 +20,7 @@ public class GardenCell : MonoBehaviour, IPointerClickHandler
         return this.vegetable;
     }
 
-    public void TryDestroyVegetable()
+    public void TryCollectVegetable()
     {
         if (vegetable.GrowPercent == 100)
         {
@@ -30,6 +31,6 @@ public class GardenCell : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        TryDestroyVegetable();
+        TryCollectVegetable();
     }
 }

@@ -38,4 +38,13 @@ public class GardenController : MonoBehaviour
         vegetables.Remove(vegetable);
         Destroy(vegetable.gameObject);
     }
+
+    public void DeleteAll()
+    {
+        foreach (var vegetable in vegetables)
+        {
+            Destroy(vegetable.gameObject);
+        }
+        vegetables.Clear();
+    }
 }

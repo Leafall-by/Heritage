@@ -87,6 +87,18 @@ MonoBehaviour:
     m_Key: CardDesc_Plague
     m_Metadata:
       m_Items: []
+  - m_Id: 5907244731846656
+    m_Key: CardDesc_CartCaution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6072937561444352
+    m_Key: CardDesc_GardenRobbery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6098510161629184
+    m_Key: CardDesc_RobberyBySoldiers
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

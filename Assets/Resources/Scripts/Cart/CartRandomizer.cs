@@ -4,8 +4,6 @@ using static UnityEditor.Progress;
 
 public class CartRandomizer
 {
-    private const int PROCENT_CHANCE = 75;
-
     private Item[] items;
 
     private const int MAX_ITEMS = 3;
@@ -17,11 +15,11 @@ public class CartRandomizer
         this.items = items;
     }
     
-    public bool IsSpawn()
+    public bool IsSpawn(int procentChance)
     {
         float chance = Random.Range(0f, 100f);
 
-        return chance < PROCENT_CHANCE;
+        return chance < procentChance;
     }
 
     public Item[] RandomizeItems()
@@ -41,6 +39,14 @@ public class CartRandomizer
     public Item RandomizeItem()
     {
         Item item = items[Random.Range(0, items.Length)];
+
+        if (item is IDependetForSpawn dependet)
+        {
+            if (dependet.IsCan() == false)
+            {
+                return RandomizeItem();
+            }
+        }
 
         if (itemsForSell.Contains(item))
         {

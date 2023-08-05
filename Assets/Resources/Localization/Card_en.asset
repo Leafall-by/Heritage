@@ -86,6 +86,18 @@ MonoBehaviour:
     m_Localized: Plague
     m_Metadata:
       m_Items: []
+  - m_Id: 10229242584879104
+    m_Localized: Cart Caution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10394990963838976
+    m_Localized: Garden Robbery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10420571797442560
+    m_Localized: Robbery by soldiers
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

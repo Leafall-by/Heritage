@@ -6,7 +6,7 @@ namespace Resources.Scripts.Animation
     public class ChangeDayAnimation : MonoBehaviour
     {
         [SerializeField] private DayChanger _dayChanger;
-        [SerializeField] private Wallet _wallet;
+        [SerializeField] private MoneyNewDayAdder moneyNewDayAdder;
         [SerializeField] private Button _activateButton;
         private Animator _animator;
         private Animator _buttonAnim;
@@ -31,7 +31,7 @@ namespace Resources.Scripts.Animation
 
         public void SpawnMoney()
         {
-            _wallet.AddGold(2);
+            moneyNewDayAdder.AddMoney();
         }
 
         public void ActiveButton()

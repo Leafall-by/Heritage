@@ -11,10 +11,6 @@ public class PlagueController : MonoBehaviour
     private const int chanceToGetPlague = 5;
     public bool PlagueIsStart { get; private set; }
 
-    private void Start()
-    {
-    }
-
     public void StartPlague()
     {
         PlagueIsStart = true;
@@ -23,11 +19,6 @@ public class PlagueController : MonoBehaviour
     }
 
     public void StopPlague()
-    {
-
-    }
-
-    private void TryGetPlague()
     {
 
     }
