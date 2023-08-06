@@ -6,7 +6,7 @@ public class PlaqueQuest : Quest
 {
     public override void TryCompleteQuest()
     {
-        if (player.Inventory.FindItemState(typeof(Medicine)).count >= 2)
+        if (player.Inventory.FindItemState(typeof(Medicine))?.count >= 2)
         {
             QuestIsFinished.Invoke(this);
         }
