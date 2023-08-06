@@ -23,7 +23,7 @@ public class WarController : MonoBehaviour
 
     public void StopWar()
     {
-
+        moneyAdder.moneyForAdd = 2;
     }
 
     public bool WarStarted()

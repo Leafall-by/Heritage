@@ -449,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullDescKey: CardFullDesc_Plague
-  dropChance: 412412
+  dropChance: 9999999
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
   BaseSprite: {fileID: 21300000, guid: dccd898a0d084374c8427a0aa8e45a84, type: 3}
   name: {fileID: 2371908873498618517}
@@ -458,6 +458,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   animator: {fileID: 0}
+  dayForSpawn: 1
 --- !u!95 &6674336342698755173
 Animator:
   serializedVersion: 5

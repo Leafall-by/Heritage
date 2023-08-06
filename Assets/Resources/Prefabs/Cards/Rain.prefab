@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullDescKey: CardFullDesc_Rain
-  dropChance: 12
+  dropChance: 241241
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
   BaseSprite: {fileID: 21300000, guid: fccc822e143d1b6498124dabdfec2b77, type: 3}
   name: {fileID: 8721261139324523198}

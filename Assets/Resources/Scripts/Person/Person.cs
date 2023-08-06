@@ -17,6 +17,6 @@ public class Person : ScriptableObject
 
     public bool IsAvaialable()
     {
-        return dialogIndex <= dayDialoges.Length;
+        return dialogIndex < dayDialoges.Length;
     }
 }

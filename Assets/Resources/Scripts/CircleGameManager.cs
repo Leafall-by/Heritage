@@ -8,6 +8,7 @@ public class CircleGameManager : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private GameObject gameCanvas;
     [SerializeField] private CircleMovement circleMovement;
+    [SerializeField] private NotificaitionController notificaitionController;
 
     private int woodForAdd = 1;
 
@@ -19,6 +20,12 @@ public class CircleGameManager : MonoBehaviour
     public void StartGame()
     {
         Axe axe = (Axe)player.Inventory.FindItemByType(typeof(Axe));
+
+        if (axe == null)
+        {
+            notificaitionController.ShowNotification("У вас нет топора");
+            return;
+        }
 
         axe.endurance -= 25;
         if (axe.endurance <= 0)

@@ -9,12 +9,18 @@ public class NotificaitionController : MonoBehaviour
     private static readonly string ToPlayer = "SendToPlayer";
     private static readonly string CloseWindow = "Close";
 
-    public void SetMessage(string text)
+    public void ShowNotification(string text)
+    {
+        SetMessage(text);
+        SendToPlayer();
+    }
+
+    private void SetMessage(string text)
     {
         _textUI.text = text;
     }
 
-    public void SendToPlayer()
+    private void SendToPlayer()
     {
         _animator.SetTrigger(ToPlayer);
     }

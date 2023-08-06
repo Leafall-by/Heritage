@@ -5,7 +5,8 @@ public class SeedMenuController : MonoBehaviour
     [SerializeField] private TimeController timeController;
     [SerializeField] private Player player;
     [SerializeField] private GameObject canvas;
-    [SerializeField] private GardenController controller;
+    [SerializeField] private GardenController gardenController;
+    [SerializeField] private NotificaitionController notificationController;
     
     [SerializeField] private Cell[] cells;
     [SerializeField] private ToolCell toolCell;
@@ -77,14 +78,15 @@ public class SeedMenuController : MonoBehaviour
     {
         if (IsCanSeed == false)
         {
+            notificationController.ShowNotification("Карта Arrow не позволяет сажать");
             return;
         }
         
         foreach (var cell in cells)
         {
-            if (controller.IsAvaiable() == false)
+            if (gardenController.IsAvaiable() == false)
             {
-                Debug.Log("Огород занят"); //TODO выводить в игре
+                notificationController.ShowNotification("Огород занят");
                 return;
             }
         }
@@ -99,6 +101,7 @@ public class SeedMenuController : MonoBehaviour
         }
         else
         {
+            notificationController.ShowNotification("Нет мотыги");
             return;
         }
 

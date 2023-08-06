@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoneyNewDayAdder : MonoBehaviour
 {
     [SerializeField] private Wallet wallet;
-    public int moneyForAdd { get; set; }
+    public int moneyForAdd;
 
     public void AddMoney()
     {

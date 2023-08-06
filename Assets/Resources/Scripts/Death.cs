@@ -20,7 +20,7 @@ public class Death : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     { 
         deathCanvas.SetActive(true);
     }

@@ -19,6 +19,22 @@ MonoBehaviour:
     m_Key: UI_DayCount
     m_Metadata:
       m_Items: []
+  - m_Id: 10396899019837440
+    m_Key: UI_Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10397069941919744
+    m_Key: UI_Localization
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10397140951486464
+    m_Key: UI_Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10446922948530176
+    m_Key: UI_Link
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

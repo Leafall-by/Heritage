@@ -48,6 +48,22 @@ public class Inventory : MonoBehaviour
 
         return null; //TODO Кидать ошибку
     }
+
+    public ItemState FindItemState(Type typeItem)
+    {
+        foreach (var itemStateList in items)
+        {
+            foreach (var itemState in itemStateList)
+            {
+                if (itemState.item.GetType() == typeItem)
+                {
+                    return itemState;
+                }
+            }
+        }
+
+        return null; // TODO Кидать ошибку
+    }
     
     public void AddItem(Item itemPrefab)
     {

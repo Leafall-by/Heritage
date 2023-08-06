@@ -24,6 +24,22 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 3751787854377779215
+  - m_Id: 10396899019837440
+    m_Localized: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10397069941919744
+    m_Localized: Localization
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10397140951486464
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10446922948530176
+    m_Localized: Links
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

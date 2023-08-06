@@ -26,8 +26,6 @@ public class CartRandomizer
     {
         itemsForSell = new List<Item>();
 
-        Debug.Log("1");
-
         for (int i = 0; i < MAX_ITEMS; i++)
         {
             itemsForSell.Add(RandomizeItem());

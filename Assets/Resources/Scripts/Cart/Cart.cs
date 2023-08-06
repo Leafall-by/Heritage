@@ -13,7 +13,6 @@ public class Cart : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        Debug.Log(items.Count);
         
         if (items.Count == COUNT_ITEMS_FOR_SELL)
         {
@@ -27,7 +26,6 @@ public class Cart : MonoBehaviour
 
     public void ShowShop()
     {
-        Debug.Log(items[0]);
         controller.SetItems(items);
     }
 

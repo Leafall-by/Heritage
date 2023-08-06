@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShopController : MonoBehaviour
 {
+    [SerializeField] private NotificaitionController notificationController;
     [SerializeField] private Player player;
     private List<Item> items;
     [SerializeField] private ShopUI shopUI;
@@ -45,7 +46,7 @@ public class ShopController : MonoBehaviour
         }
         catch (NotEnoughGoldException ex)
         {
-            Debug.Log(ex.Message);
+            notificationController.ShowNotification("Не достаточно денег");
             return;
         }
 
