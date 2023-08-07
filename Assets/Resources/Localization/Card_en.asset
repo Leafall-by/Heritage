@@ -98,6 +98,10 @@ MonoBehaviour:
     m_Localized: Robbery by soldiers
     m_Metadata:
       m_Items: []
+  - m_Id: 11109038760120320
+    m_Localized: BrokenCart
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

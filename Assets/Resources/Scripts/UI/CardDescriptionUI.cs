@@ -1,39 +1,32 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
+using UnityEngine.UI;
 
 public class CardDescriptionUI : MonoBehaviour
 {
-    [SerializeField] private GameObject SpawnPoint;
-    [SerializeField] private TextMeshProUGUI description;
+    [SerializeField] private Image cardImage;
+    [SerializeField] private TextMeshProUGUI titleText;
+    [SerializeField] private TextMeshProUGUI descriptionText;
+    [SerializeField] private TextMeshProUGUI fullDescription;
 
     private Card card;
 
     public void EnableDescriptionUI(Card card)
     {
-        this.card = Instantiate(card, SpawnPoint.transform);
+        cardImage.sprite = card.BaseSprite;
 
-        SettingRectTransform(this.card);
-
-        description.text = LocalizationSettings.StringDatabase.GetLocalizedString("CardFullDesc", card.fullDescKey);
+        titleText.text = card.name.gameObject.GetComponent<LocalizeStringEvent>().StringReference.GetLocalizedString();
+        descriptionText.text = card.description.gameObject.GetComponent<LocalizeStringEvent>().StringReference.GetLocalizedString();
+        fullDescription.text = LocalizationSettings.StringDatabase.GetLocalizedString("CardFullDesc", card.fullDescKey);
 
         this.gameObject.SetActive(true);
     }
 
-    private void SettingRectTransform(Card card)
-    {
-        RectTransform transform = this.card.transform as RectTransform;
-        transform.anchorMin = new Vector2(0.5f, 0.5f);
-        transform.anchorMax = new Vector2(0.5f, 0.5f);
-        transform.pivot = new Vector2(0.5f, 0.5f);
-        transform.sizeDelta = new Vector2(387, 382);
-        card.transform.localScale = new Vector3(1.7f, 1.7f, 1f);
-    }
-
     public void CloseUI()
     {
-        Destroy(card.gameObject);
         this.gameObject.SetActive(false);
     }
 }

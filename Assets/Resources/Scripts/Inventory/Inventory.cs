@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -63,6 +62,24 @@ public class Inventory : MonoBehaviour
         }
 
         return null; // TODO Кидать ошибку
+    }
+
+    public bool CheckCanAdd(Item item)
+    {
+        if (item is Tool tool)
+        {
+            if (tools[tools.Count-1].Count == maxTools)
+            {
+                return false;
+            }
+        }
+
+        if (items[items.Count-1].Count == maxItems)
+        {
+            return false;
+        }
+
+        return true;
     }
     
     public void AddItem(Item itemPrefab)

@@ -89,7 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dbab7a7be14358468be9e2dd2800af4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  dropChance: 12412412
   name: 
   image: {fileID: 21300000, guid: 18dbbe468c9319c4492ef83ca5067c5e, type: 3}
   price: 12
-  endurance: 50
+  endurance: 100

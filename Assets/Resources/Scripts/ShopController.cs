@@ -40,6 +40,11 @@ public class ShopController : MonoBehaviour
 
     public void BuyItem(int index)
     {
+        if (player.Inventory.CheckCanAdd(items[index]) == false)
+        {
+            return;
+        }
+
         try
         {
             player.Wallet.RemoveGold((int)Math.Ceiling(items[index].price - (items[index].price * (discount/100.0))));

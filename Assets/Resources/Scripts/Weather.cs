@@ -35,7 +35,6 @@ public class Weather : MonoBehaviour
         sky.color = Color.white;
         SetColorOnElements(Color.white);
         rain.Stop();
-        Debug.Log("11123123");
     }
 
     private void SetColorOnElements(Color color)
@@ -43,6 +42,13 @@ public class Weather : MonoBehaviour
         foreach (var element in _elements)
         {
             element.color = color;
+        }
+
+        Cart cart = FindObjectOfType<Cart>();
+
+        if (cart != null)
+        {
+            cart.GetComponent<Image>().color = color;
         }
     }
 }

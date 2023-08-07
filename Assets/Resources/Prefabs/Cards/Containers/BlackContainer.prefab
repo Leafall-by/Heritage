@@ -57,6 +57,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabCard: {fileID: 0}
   _audio: {fileID: 0}
+  desc: {fileID: 0}
   OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -938,6 +939,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5207269329347504011, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+    - {fileID: 3174968498979554982, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
+    - {fileID: 433018720145398105, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 641e2f349ee231a488cb9b5e3e89828c, type: 3}
 --- !u!224 &451992903600338870 stripped
 RectTransform:

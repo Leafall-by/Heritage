@@ -99,6 +99,10 @@ MonoBehaviour:
     m_Key: CardDesc_RobberyBySoldiers
     m_Metadata:
       m_Items: []
+  - m_Id: 6786982719508480
+    m_Key: CardDesc_BrokenCart
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

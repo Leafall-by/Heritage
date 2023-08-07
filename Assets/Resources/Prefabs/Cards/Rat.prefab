@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullDescKey: CardFullDesc_Rat
-  dropChance: 40
+  dropChance: 28
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
   BaseSprite: {fileID: 21300000, guid: 235fde9e57cd09b4f896b30125bdb4fe, type: 3}
   name: {fileID: 5378083734392014500}

@@ -11,7 +11,6 @@ public class ButtonAnimation : MonoBehaviour
     
     public void PlayAnimButton()
     {
-        Debug.Log("12412412");
         _buttonAnim.SetTrigger("Click");
     }
 }

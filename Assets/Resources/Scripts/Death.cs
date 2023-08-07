@@ -14,14 +14,14 @@ public class Death : MonoBehaviour
 
     private void TryDie()
     {
-        if (playerStats.PlayerWater.Water < 0 || playerStats.PlayerFood.Food < 0 || playerStats.PlayerWood.Wood < 0)
-        {
-            Die();
-        }
+        //if (playerStats.PlayerWater.Water < 0 || playerStats.PlayerFood.Food < 0 || playerStats.PlayerWood.Wood < 0)
+        //{
+        //    Die();
+        //}
     }
 
     public void Die()
     { 
-        deathCanvas.SetActive(true);
+        //deathCanvas.SetActive(true);
     }
 }

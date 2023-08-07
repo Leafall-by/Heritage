@@ -9,8 +9,6 @@ public class RedZone : MonoBehaviour
     {
         CircleMovement rider = other.gameObject.GetComponent<CircleMovement>(); 
         
-        Debug.Log(rider);
-        
         if (rider != null)
         {
             rider.SetInRedZone(true);

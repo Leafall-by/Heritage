@@ -60,9 +60,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3394292404224
-    m_Localized: "\u042F \u043F\u0440\u043E\u043C\u043E\u043A... \u0415\u0441\u043B\u0438
-      \u0437\u0430\u0431\u043E\u043B\u0435\u044E, \u0431\u0443\u0434\u0435\u0442
-      \u043F\u043B\u043E\u0445\u043E."
+    m_Localized: "\rI got wet... If I get sick, it will be bad.."
     m_Metadata:
       m_Items: []
   - m_Id: 3604020187136
@@ -106,6 +104,10 @@ MonoBehaviour:
   - m_Id: 6098510161629184
     m_Localized: Of course, I'll give you a couple of my things, I don't survive
       here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6786982719508480
+    m_Localized: The cart broke down on your territory
     m_Metadata:
       m_Items: []
   references:

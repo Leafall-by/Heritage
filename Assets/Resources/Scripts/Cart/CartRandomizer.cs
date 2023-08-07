@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
-using static UnityEditor.Progress;
+using Random = UnityEngine.Random;
 
 public class CartRandomizer
 {
@@ -36,21 +38,43 @@ public class CartRandomizer
 
     public Item RandomizeItem()
     {
-        Item item = items[Random.Range(0, items.Length)];
+        List<Item> availableItems = new List<Item>();
 
-        if (item is IDependetForSpawn dependet)
+        int sum = 0;
+        foreach (var item in items)
         {
-            if (dependet.IsCan() == false)
+            if ((item is IDependetForSpawn dependet && !dependet.IsCan()) || IsContains(item))
             {
-                return RandomizeItem();
+                continue;
+            }
+            sum += item.dropChance;
+            availableItems.Add(item);
+        }
+
+        int random = Random.Range(0, sum);
+        for (int i = 0; i < availableItems.Count; i++)
+        {
+            random -= availableItems[i].dropChance;
+            if (random <= 0)
+            {
+                return availableItems[i];
             }
         }
 
-        if (itemsForSell.Contains(item))
+        throw new NullReferenceException();
+    }
+
+    private bool IsContains(Item randomItem)
+    {
+        bool isContains = false;
+        foreach (var item in itemsForSell)
         {
-            return RandomizeItem();
+            if (item == randomItem)
+            {
+                isContains = true;
+            }
         }
 
-        return item;
+        return isContains;
     }
 }

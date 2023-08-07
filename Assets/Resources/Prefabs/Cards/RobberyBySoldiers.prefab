@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullDescKey: CardFullDesc_RobberyBySoldiers
-  dropChance: 12412
+  dropChance: 20
   BlackCardSprite: {fileID: 21300000, guid: ec1e1586fcfe62d45a9e569746397bf5, type: 2}
   BaseSprite: {fileID: 21300000, guid: 5cb9d32416bfd9643bde5bae9748a2d9, type: 3}
   name: {fileID: 1927714376105560511}

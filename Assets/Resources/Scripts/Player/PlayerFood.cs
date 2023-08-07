@@ -6,11 +6,13 @@ public class PlayerFood : MonoBehaviour
     public int Food { get; private set; }
     public const int MAX_FOOD = 50;
 
-    public event Action<int> FoodIsChanged;
+    [HideInInspector] public event Action<int> FoodIsChanged;
+
+    private int multiplier = 1;
 
     public void AddFood(int food)
     {
-        this.Food += food;
+        this.Food += food * multiplier;
 
         if (this.Food > MAX_FOOD)
         {

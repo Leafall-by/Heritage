@@ -6,11 +6,10 @@ public class WoodUI : MonoBehaviour
 {
     [SerializeField] private PlayerStats stats;
     [SerializeField] private TextMeshProUGUI textCount;
-    private Image image;
-    
+    [SerializeField] private Image image;
+
     private void Start()
     {
-        image = GetComponentInChildren<Image>();
         stats.PlayerWood.WoodIsChanged += ChangeFoodSlider;
     }
 

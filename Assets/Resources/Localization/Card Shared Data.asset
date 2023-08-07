@@ -95,6 +95,10 @@ MonoBehaviour:
     m_Key: Card_RobberyBySoldiers
     m_Metadata:
       m_Items: []
+  - m_Id: 11109038760120320
+    m_Key: Card_BrokenCart
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -6,11 +6,13 @@ public class PlayerWater : MonoBehaviour
     public int Water { get; private set; }
     public const int MAX_WATER = 50;
     
-    public Action<int> WaterIsChanged;
-    
+    [HideInInspector] public Action<int> WaterIsChanged;
+
+    private int multiplier = 1;
+
     public void AddWater(int water)
     {
-        this.Water += water;
+        this.Water += water * multiplier;
 
         if (Water > MAX_WATER)
         {

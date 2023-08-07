@@ -11,6 +11,8 @@ namespace Resources.Scripts.Animation
         private Animator _animator;
         private Animator _buttonAnim;
 
+        public bool CartIsBroken;
+
         private void Awake()
         {
             _animator = GetComponent<Animator>();
@@ -25,8 +27,11 @@ namespace Resources.Scripts.Animation
 
         public void TrySpawnCart()
         {
-            _dayChanger.DeleteCart();
-            _dayChanger.SpawnCart();
+            if (!CartIsBroken)
+            {
+                _dayChanger.DeleteCart();
+                _dayChanger.SpawnCart();
+            }
         }
 
         public void SpawnMoney()
