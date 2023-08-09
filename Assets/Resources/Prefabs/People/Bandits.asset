@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81949a232dd54c45b2af43ed7a07849, type: 3}
   m_Name: Bandits
   m_EditorClassIdentifier: 
-  IsWas: 0
-  inputDialog: {fileID: 4900000, guid: 4938f47bffea69849b648d6ee47d7a0e, type: 3}
+  dialogIndex: 0
+  dayDialoges:
+  - {fileID: 4900000, guid: e876453e34ccfa045bb2648e949f7527, type: 3}
+  - {fileID: 4900000, guid: feaf74202db818747a34ca5c0d6bf247, type: 3}
+  - {fileID: 4900000, guid: 7adb5f1ed2ec8b941b59a3b565c74479, type: 3}

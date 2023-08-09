@@ -35,6 +35,18 @@ MonoBehaviour:
     m_Key: UI_Link
     m_Metadata:
       m_Items: []
+  - m_Id: 11501336891215872
+    m_Key: UI_Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11501411856011264
+    m_Key: UI_Load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11501505539985408
+    m_Key: UI_Exit
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

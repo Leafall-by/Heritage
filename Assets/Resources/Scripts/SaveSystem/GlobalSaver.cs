@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 
@@ -14,6 +15,8 @@ public class GlobalSaver : MonoBehaviour, ISaver
     [SerializeField] private CartSpawner cartSpawner;
     [SerializeField] private ShopController controller;
     [SerializeField] private DayChanger changer;
+    [SerializeField] private QuestController questController;
+    [SerializeField] private QuestHub questHub;
     
     private List<ISaver> savers = new List<ISaver>();
 
@@ -23,6 +26,7 @@ public class GlobalSaver : MonoBehaviour, ISaver
         savers.Add(new ItemSaver(inventory, itemHub));
         savers.Add(new CardSaver(cardHub, cardUI));
         savers.Add(new CartSaver(cartSpawner, itemHub, controller));
+        savers.Add(new QuestSaver(questController, questHub));
     }
 
     public void Save()
@@ -42,5 +46,10 @@ public class GlobalSaver : MonoBehaviour, ISaver
         {
             saver.Load();
         }
+    }
+
+    public bool HasSave()
+    {
+        return File.Exists(Application.persistentDataPath + "/Stats.dat");
     }
 }

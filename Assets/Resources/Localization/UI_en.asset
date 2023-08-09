@@ -40,6 +40,18 @@ MonoBehaviour:
     m_Localized: Links
     m_Metadata:
       m_Items: []
+  - m_Id: 11501336891215872
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11501411856011264
+    m_Localized: Load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11501505539985408
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

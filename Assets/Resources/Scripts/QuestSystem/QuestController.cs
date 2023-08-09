@@ -26,11 +26,28 @@ public class QuestController : MonoBehaviour
         questGameobject.QuestIsFinished.AddListener(DeleteQuest);
     }
 
+    public void AddQuestWithDifferentDuration(Quest quest, int duration)
+    {
+        Quest questGameobject = Instantiate(quest, spawnObject.transform);
+
+        questGameobject.currentDay = duration;
+        questGameobject.Init(player);
+        quests.Add(questGameobject);
+
+        changer.DayChanged.AddListener(questGameobject.SkipDay);
+        questGameobject.QuestIsFinished.AddListener(DeleteQuest);
+    }
+
     private void DeleteQuest(Quest quest)
     {
         changer.DayChanged.RemoveListener(quest.SkipDay);
         quests.Remove(quest);
         quest.QuestIsFinished.RemoveAllListeners();
         Destroy(quest.gameObject);
+    }
+
+    public List<Quest> GetQuests()
+    {
+        return quests;
     }
 }

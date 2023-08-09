@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c81949a232dd54c45b2af43ed7a07849, type: 3}
-  m_Name: Bandit
+  m_Name: ForestMan
   m_EditorClassIdentifier: 
   dialogIndex: 0
-  dayDialoges: []
+  dayDialoges:
+  - {fileID: 4900000, guid: 5d03ca77353b89748b04c303038cd635, type: 3}

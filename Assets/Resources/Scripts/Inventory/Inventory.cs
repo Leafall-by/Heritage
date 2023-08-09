@@ -97,7 +97,6 @@ public class Inventory : MonoBehaviour
                     return;
                 }
             }
-            
         }
         
         ItemState itemState = FindItemState(item);

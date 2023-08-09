@@ -14,6 +14,7 @@ public class DayChanger : MonoBehaviour
     [SerializeField] private ShopController shopController;
     [SerializeField] private GardenController gardenController;
     [SerializeField] private CardGiverUI cardGiverUI;
+    [SerializeField] private GlobalSaver saver;
     
     //TODO: Вынести в отдельный класс
     [SerializeField] private ChangeDayAnimation dayAnimation;
@@ -38,6 +39,8 @@ public class DayChanger : MonoBehaviour
 
     public void ChangeDay()
     {
+        saver.Save();
+
         day++;
         gardenController.Grow();
         dayAnimation.ChangeDay();

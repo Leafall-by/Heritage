@@ -9,10 +9,10 @@ public abstract class Quest : MonoBehaviour
     [HideInInspector] public UnityEvent<Quest> QuestIsFinished;
 
     [SerializeField] private TextMeshProUGUI timeText;
-    [SerializeField] private int id;
+    [SerializeField] public int id;
     [SerializeField] private int DayForComplete;
 
-    protected int currentDay;
+    public int currentDay;
     protected Player player;
 
     public virtual void Init(Player player)

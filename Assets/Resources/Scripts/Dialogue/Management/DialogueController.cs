@@ -3,11 +3,12 @@ using System.Collections;
 using Ink.Runtime;
 using UnityEngine;
 
-[RequireComponent(typeof(DialogueWindow), typeof(DialogueTag))]
+[RequireComponent(typeof(DialogueWindow), typeof(DialogueTag), typeof(DialogueMethods))]
 public class DialogueController : MonoBehaviour
 {
     private DialogueWindow _dialogueWindow;
     private DialogueTag _dialogueTag;
+    private DialogueMethods _dialogueMethods;
     
     public Story CurrentStory { get; private set; }
 
@@ -20,6 +21,8 @@ public class DialogueController : MonoBehaviour
         
         _dialogueWindow.Init();
         _dialogueTag.Init();
+
+        _dialogueMethods = GetComponent<DialogueMethods>();
     }
 
     private void Start()
@@ -48,7 +51,16 @@ public class DialogueController : MonoBehaviour
         
         _dialogueWindow.SetActive(true);
 
+        BindMethods();
+
         ContinueStory();
+    }
+
+    private void BindMethods()
+    {
+        CurrentStory.BindExternalFunction("GiveMoney", (int value) => _dialogueMethods.GetMoney(value));
+        CurrentStory.BindExternalFunction("RemoveMoney", (int value) => _dialogueMethods.RemoveMoney(value));
+        CurrentStory.BindExternalFunction("GetItem", (int id) => _dialogueMethods.GetItem(id));
     }
 
     private IEnumerator ExitDialogueMode()
